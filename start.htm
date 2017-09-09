@@ -1,0 +1,55 @@
+<html>
+<head>
+<style>
+
+.position { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 250px;
+    width: 400px;
+    margin-top: -150px; /* -(1/2 height) */
+    margin-left: -250px; /* -(1/2 width) */
+    padding-top: 20px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    
+    background-color: #fafafa;
+    border:1px solid;
+    border-color: #333;
+    font-family:Arial;
+  }
+  
+h4 { font-weight:400; 
+ }
+
+</style>
+
+<meta http-equiv="refresh" content="5; URL=http://localhost/index.html">
+<title>Start shttpd server first</title>
+</head>
+<body>
+<div class="position">
+<h2>Starting Offline Web Site</h2>
+<h4>
+The web server <b>shttpd.exe</b> must be started first.<br><br>  
+The <b>start.bat</b> file will start the web server.<br>
+
+</h4>
+<p>
+The web site will start in 5 seconds.
+</p>
+<progress value="0" max="5" id="progressBar"></progress>
+
+</div>
+<script>
+var timeleft = 10;
+var downloadTimer = setInterval(function(){
+  document.getElementById("progressBar").value = 10 - --timeleft;
+  if(timeleft <= 0)
+    clearInterval(downloadTimer);
+},1000);
+</script>
+</body>
+</html>
