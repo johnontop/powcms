@@ -1,0 +1,48 @@
+Version History and Project objectives
+
+Project goals for POW CMS
+- Make a folder/file based CMS that creates a HTML based web site.
+- CMS shall work on 32bit Windows XP, Windows 7/8 and other systems.
+- Code and system shall be extreamly minimalistic. Few system files. One admin function = One file.
+- Portable CMS. No installation. No setup. Just One click and site launches.
+- No expternal depencencies. Web server, PHP, jQuery, MySQL and other needed files in one ZIP file. (~12MB zipped)
+- Use "modern" techniques like PHP, javascript, Ajax, jQuery, Bootstrap plus MySQL/SQLIte as options.
+- TinyMCE HTML editor as "Word Processor" for HTML files.
+- Easy navigation with search and blog functions to edit files.
+- Theme/Templates/Page designs switching funtion for admin.
+- An intuitive user experience. It shall only take minutes before creating the first web page.
+- Easy to create and distribute a small HTML based web site, via a ZIP file.
+- CMS shall work both Offline on a USD Stick and with Online Web Servers.
+- All resource files shall be easily updated. Therefore .js and .css files are kept in same ./res/folder.
+
+Main system files
+- pow-edit.php (Page Editor)
+- pow-login.php (Login for Page Editor)
+- pow-scan.php (Page Search and Navigation generator)
+- pow-update.php (Simple updater for "system" files into pages sub folders)
+
+powcms.zip v0.4 - 2017-09-11
+- pow-update.php runs CopyFiles.bat hidden.
+- pow-scan.php detects and shows folders content and also shows "Tag Word" that can be edited.
+- pow-scan.php, fixed links for folder names with space char.
+- Added pow-scan.php to "Top Menu" as a Site Map, even though it is PHP based.
+- Moved MySQL and SQLite from system folder to a separate zip powcms-sql.zip
+- In Page Editor, "Update Folder Files" now runs CopyFiles.bat hidden, then runs pow-scan.php to "Update Search" function.
+
+powcms.zip v0.3 - 2017-09-10
+- Added Search by Tag Words. Tag words file is updated by pow-scan.php
+- Fixed Search Scan by filter out a strange character.
+- Moved password setting to system folder user-pass.php
+
+powcms.zip v0.2 - 2017-09-10
+- Cleaned up code in editor pow-edit
+- Editor now auto loads the html file specified in index_vars.js
+- Fixed reading and writing of HTML files in UTF--8 format?
+- Prepared pow-edit.php and index_vars.js for a new variable, Author:
+- Added date-time picker in CMS Page Editor for variable "date".
+- Added pow-update.php, simple updater for needed folder files.
+- Added version history file "history.htm"
+
+powcms.zip v0.1 - 2017-09-09
+- Initital release on Github.
+- CMS, system and code working, but messy
