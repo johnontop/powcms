@@ -1,6 +1,10 @@
+
+
 What is Portable Offline Web CMS?
 
 The POW CMS is in an early development stage, but is is fully functional.
+All suggestions for improvemets are welcome!
+It is not possible to use national characters for writing/reading UTF-8 chars in files and folders eg. MÃ¶tley CrÃ¼e
 
 The Portable Offline Web CMS (POW CMS) is a very easy way to build and view an offline web site.
 The goal with this project is to make a complete, simple and tiny html file based CMS with a web server system that is portable on a USB stick and requires no installation or setup.
@@ -44,9 +48,13 @@ Get started with Portable Offline Web CMS and Web Server
 
 Download the POWCMS zip file, unzip it and ...
 
-Click on start.bat in the "root" folder to run the web server and start the web pages. 
+Click on start.bat in the "root" folder to run the web server and start the web pages.
 
-Login with (user=admin / password=password) and start editing pages.
+Login with (user=admin / password=powcms) and start editing pages.
+
+This is how the Page Editor currently looks like
+
+Page Editor
 How the Portable Offline Web Server works
 
 Resources - files
