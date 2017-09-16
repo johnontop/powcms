@@ -1,0 +1,60 @@
+Version History and Project objectives
+
+Project goals for POW CMS
+- Make a folder/file based CMS that creates a HTML based web site.
+- CMS shall work on 32bit/64bit Windows XP and Windows 7/8/10 systems.
+- Code and system shall be extreamly minimalistic. Few system files. One system function = One file.
+- Portable CMS. No installation. No setup. Just One click and site launches.
+- No expternal depencencies. Complete CMS, Web server, PHP, jQuery and other needed files in one ZIP file. (~12MB zipped)
+- Use "modern" techniques like PHP, javascript, Ajax, jQuery, Bootstrap plus portable MySQL/SQLIte as options.
+- TinyMCE HTML editor as "Word Processor" for HTML files.
+- Easy navigation with search and blog functions to edit files.
+- Theme/Templates/Page designs switching funtion for admin.
+- Language switching and translation funtion for admin.
+- Simple Login for admins.
+- An intuitive user experience. It shall only take minutes before creating the first web page.
+- Easy to create and distribute a small HTML based web site, via a ZIP file.
+- CMS shall work both Offline on a USB Stick and with Online Web Servers.
+- All resource files shall be easily updated. Therefore .js and .css files are kept in same ./res/folder.
+
+Main system files
+- pow-edit.php (Page Editor and Navigation file generator)
+- pow-scan.php (Page Search and Navigation generator)
+- pow-update.php (Simple updater for "system" files into pages sub folders - it runs hidden)
+- pow-login.php (Login for Page Editor)
+
+powcms.zip v0.4 - 2017-09-16
+- pow-update.php runs CopyFiles.bat hidden.
+- pow-scan.php detects and shows folders content and also shows "Tag Word" that can be edited.
+- pow-scan.php, fixed links for folder names with space char.
+- Added pow-scan.php to "Top Menu" as a Site Map, even though it is PHP based.
+- Edit sub sfolder pages directly from Page Editor
+- Added button for page edit in pow-scan.php
+- Added footer with copyright notice
+- Added pow-vars.js with system variables for file index.htm with header-title, copyright and more
+- Moved MySQL and SQLite from system folder to a separate zip powcms-sql.zip
+- In Page Editor, "Update Folders" now runs CopyFiles.bat hidden, then runs pow-scan.php to "Update Search" function.
+- Added modal popup when "Update Folders" is ran, with info to the user about what's happening.
+- Added Roboto web font from FontSquirrel. Font weights 200, 300, 500, 600 skipped fat black.
+- Added embryo for language translations in pow-vars.js - translate in folders /res/language/xx/
+- Fixed Think that UTF-8 national character with Tag Search together with Tipue Searched finally is fixed.
+- Added Encode Explorer as content file viewer.
+- Added PHPliteadmin for SQLite database management.
+
+powcms.zip v0.3 - 2017-09-10
+- Added Search by Tag Words. Tag words file is updated by pow-scan.php
+- Fixed Search Scan by filter out a strange character.
+- Moved password setting to system folder user-pass.php
+
+powcms.zip v0.2 - 2017-09-10
+- Cleaned up code in editor pow-edit
+- Editor now auto loads the html file specified in index_vars.js
+- Fixed reading and writing of HTML files in UTF--8 format?
+- Prepared pow-edit.php and index_vars.js for a new variable, Author:
+- Added date-time picker in CMS Page Editor for variable "date".
+- Added pow-update.php, simple updater for needed folder files.
+- Added version history file "history.htm"
+
+powcms.zip v0.1 - 2017-09-09
+- Initital release on Github.
+- CMS, system and code working, but messy
