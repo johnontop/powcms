@@ -7,7 +7,7 @@ Project goals for POW CMS
 - Portable CMS. No installation. No setup. Just One click and site launches.
 - No expternal depencencies. Complete CMS, Web server, PHP, jQuery and other needed files in one ZIP file. (~12MB zipped)
 - Use "modern" techniques like PHP, javascript, Ajax, jQuery, Bootstrap plus portable MySQL/SQLIte as options.
-- TinyMCE HTML editor as "Word Processor" for HTML files.
+- Word Processor - TinyMCE HTML editor for editing HTML files.
 - Easy navigation with search and blog functions to edit files.
 - Theme/Templates/Page designs switching funtion for admin.
 - Language switching and translation funtion for admin.
@@ -20,10 +20,31 @@ Project goals for POW CMS
 Main system files
 - pow-edit.php (Page Editor and Navigation file generator)
 - pow-scan.php (Page Search and Navigation generator)
-- pow-update.php (Simple updater for "system" files into pages sub folders - it runs hidden)
+- pow-update.php (Simple updater for "system" files into pages sub folders - it runs hidden mode)
 - pow-login.php (Login for Page Editor)
 
-powcms.zip v0.4 - 2017-09-16
+Remaining work and issues
+- Get TinyMCE spellchecker to work - spellchecker files are installed
+- Have jQuery Side Menu to show side-menu.htm file properly.
+- Finish translator pow-custom.php so it can generate translated files.
+
+powcms.zip v0.5 - 2017-09-22
+- Added a Side - Menu Navgoco jQuery menu for a new 3 column page template.
+- Added a Site Map generator to pow-scan.php for Side Menu
+- Added modal popup in index.htm for "System Update"
+- Addeb Menu generator - pow-scan.php now scans all folders and create side-folder.htm files in each directory.
+- pow-scan-php reads sub folders index_vars.js - title tag and inserts national UTF-8 chars into side-folders.htm
+- Added spellcheker for TinyMCE, but didn't get it to work according to TinyMCE instructions.
+- Moved files around to get Theme Changer and translations to work.
+- Began to work on a system Translator (pow-custom.php) that will generate files with translation.
+- Made a German version of the default theme and a custom theme to show differences.
+- Changed paths in pow-files so the site can be uploaded to an online web servers root folder.
+- Login now sets cookie "root" path that is used for pow-edit.php files
+- Added phpLiteAdmin for SQLite database admin.
+- View PHP info in Login
+- Added hidden folder dev for experimental files. Folders res and system are also hidden in menues.
+
+powcms.zip v0.4 - 2017-09-11
 - pow-update.php runs CopyFiles.bat hidden.
 - pow-scan.php detects and shows folders content and also shows "Tag Word" that can be edited.
 - pow-scan.php, fixed links for folder names with space char.
