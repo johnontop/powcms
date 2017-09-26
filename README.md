@@ -49,3 +49,8 @@ Download the POWCMS zip file, unzip it and ...
 Click on start.bat in the "root" folder to run the web server and start the web pages.
 
 Login with (user=admin / password=powcms) and start editing pages.
+
+
+Have a look at the Demo page of the zip here (not all folders are uploaded)
+
+https://powcms.000webhostapp.com/
