@@ -10,8 +10,8 @@ I was searching the web for a good HTML editor. but couldn't find one. So I ende
 
 Get started with POW CMS and start editing pages
 
-1 Requirements - PC with Windows XP, Windows 7,  Windows 8 or Windows 10
-2 Click on powcms.zip in Github and download it to your PC
+1 - Requirements - PC with Windows XP, Windows 7,  Windows 8 or Windows 10
+2 - Click on powcms.zip in Github and download it to your PC
 3 Unzip the powcms.zip on your PC
 4 Click on start.bat in the "root" folder to start the web server and the web pages.
 5 To edit a Page, click on Edit Page in the upper right corner.
