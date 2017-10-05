@@ -1,12 +1,26 @@
 
+ 
 What is Portable Offline Web CMS?
-View the online demo here. Editing will be disabled if it is abused.
+
+View the online demo here.
 https://powcms.000webhostapp.com/
 
 I was searching the web for a good HTML editor. but couldn't find one. So I ended up making a HTML editor, that became much more - a full CMS. The POW CMS is a unique and minimalistic full featured HTML Editor and Web Site builder "application" under development, but it is fully functional. You can start to build your Portable Offline Web Site today. Download and get the complete demo website with this tiny and effective system.
 
 
-The Portable Offline Web CMS (POW CMS) is a very easy way to build and view an offline web site. The goal with this project is to make a complete, simple and tiny HTML file based CMS with a web server system that is portable on a USB stick and requires no installation or setup.
+Get started with POW CMS and start editing pages
+
+1 Requirements - PC with Windows XP, Windows 7,  Windows 8 or Windows 10
+2 Click on powcms.zip in Github and download it to your PC
+3 Unzip the powcms.zip on your PC
+4 Click on start.bat in the "root" folder to start the web server and the web pages.
+5 To edit a Page, click on Edit Page in the upper right corner.
+6 Login with (user=admin / password=powcms) and start editing pages.
+7 Read the documentation in the POW CMS demo you just downloaded
+
+
+Why POW CMS?
+The Portable Offline Web CMS (POW CMS) is a very easy way to build and view an offline web site. The goal with this project is to make a complete, simple and tiny HTML file based Page Editor and CMS with a web server system that is portable on a USB stick and requires no installation or setup.
 The project is more focused on making of web pages as easy as possible, compared to a complex online web server system. This package might be perfect for you - if you need a whole working web site for distribution - on a USB stick or by downloads, - if you write texts for the web, make web designs, make presentations anywhere. It is an entirely HTML file based web and a PHP based CMS system.
 
 - Fully functional web site, based on only HTML pages.
@@ -19,11 +33,11 @@ The project is more focused on making of web pages as easy as possible, compared
 - Built in PHP support for creating and editing of the web pages.
 - HTML editor TinyMCE is used for editing your local HTML files.
 - Support for portable MySQL or SQLite for more advanced functions.
+- Backup of saved Pages into SQLite database.
 - Easy to customize with your page Title and Logos - Make a Theme.
 - Translations of UI in only a few files.
 
 Portable Offline Web System is perfect for:
-
 - Runs from a USB stick, no need for internet connection.
 - Show an offline version of your website.
 - Anywhere and anytime develop html/php websites.
@@ -31,7 +45,6 @@ Portable Offline Web System is perfect for:
 - Working at multiple locations with pages and projects.
 - A good test before putting your pages or website online.
 - And many more advantages.
-
 With this package you get:
 - Portable Offline Web Server (60KB) powered with PHP v4.5.9 for Window 32-bit.
 - Bootstrap responsive framework version 3.3.7
@@ -47,16 +60,8 @@ With this package you get:
 - Web site System Update generator for search and menus features.
 - Bootstrap templates for easy change of page appearance.
 - Limited documentation at the moment (under development)
-Get started with Portable Offline Web CMS and Web Server
-
-Download the POWCMS zip file, unzip it and ...
-
-Click on start.bat in the "root" folder to run the web server and start the web pages.
-
-Login with (user=admin / password=powcms) and start editing pages.
 
 Screenshots of POW CMS
-
 This is how the Page Editor currently looks like and the Start Page with System Update below.
 
 Page Editor
