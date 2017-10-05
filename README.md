@@ -63,6 +63,7 @@ With this package you get:
 - Limited documentation at the moment (under development)
 
 Screenshots of POW CMS
+
 This is how the Page Editor currently looks like and the Start Page with System Update below.
 
 Page Editor
