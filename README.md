@@ -5,7 +5,7 @@ What is Portable Offline Web CMS?
 View the online demo here.
 https://powcms.000webhostapp.com/
 
-I was searching the web for a good HTML editor. but couldn't find one. So I ended up making a HTML editor, that became much more - a full CMS. The POW CMS is a unique and minimalistic full featured HTML Editor and Web Site builder "application" under development, but it is fully functional. You can start to build your Portable Offline Web Site today. Download and get the complete demo website with this tiny and effective system.
+I was searching the web for a good HTML editor, but couldn't find one. So I ended up making a HTML editor, that became much more - a full CMS. The POW CMS is a unique and minimalistic full featured HTML Editor and Web Site builder "application" under development, but it is fully functional. You can start to build your Portable Offline Web Site today. Download and get the complete demo website with this tiny and effective system.
 
 
 Get started with POW CMS and start editing pages
