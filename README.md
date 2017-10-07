@@ -10,7 +10,7 @@ I was searching the web for a good HTML editor. but couldn't find one. So I ende
 
 Get started with POW CMS and start editing pages
 
-1. Requirements - PC with Windows XP, Windows 7,  Windows 8 or Windows 10
+1. Requirements - PC with Windows XP, Windows 7, Windows 8 or Windows 10
 2. Click on powcms.zip in Github and download it to your PC
 3. Unzip the powcms.zip on your PC
 4. Click on start.bat in the "root" folder to start the web server and the web pages.
@@ -20,10 +20,10 @@ Get started with POW CMS and start editing pages
 
 
 Why POW CMS?
-
 The Portable Offline Web CMS (POW CMS) is a very easy way to build and view an offline web site. The goal with this project is to make a complete, simple and tiny HTML file based Page Editor and CMS with a web server system that is portable on a USB stick and requires no installation or setup.
 The project is more focused on making of web pages as easy as possible, compared to a complex online web server system. This package might be perfect for you - if you need a whole working web site for distribution - on a USB stick or by downloads, - if you write texts for the web, make web designs, make presentations anywhere. It is an entirely HTML file based web and a PHP based CMS system.
 
+Features
 - Fully functional web site, based on only HTML pages.
 - Folder and file based page system.
 - No external dependencies.
@@ -33,8 +33,12 @@ The project is more focused on making of web pages as easy as possible, compared
 - It is responsive with Bootstrap framework and jQuery.
 - Built in PHP support for creating and editing of the web pages.
 - HTML editor TinyMCE is used for editing your local HTML files.
+- Automatic building of side menus with the function System Update.
 - Support for portable MySQL or SQLite for more advanced functions.
 - Backup of saved Pages into SQLite database.
+- Built in ZIP functionality of folder trees. Ready to mail.
+- Ready made layout snippets to insert into text area.
+- Export page to Microsoft Word with a click.
 - Easy to customize with your page Title and Logos - Make a Theme.
 - Translations of UI in only a few files.
 
@@ -63,7 +67,6 @@ With this package you get:
 - Limited documentation at the moment (under development)
 
 Screenshots of POW CMS
-
 This is how the Page Editor currently looks like and the Start Page with System Update below.
 
 Page Editor
