@@ -32,6 +32,10 @@ Remaining work and issues
 - Make mini Blog the shows latest changes in a list.
 - Clean up and structure code in pow-edit.php when ideas are implemented
 
+powcms.zip v0.9 - 2017-10-09
+- Added a first version 3 Column Mobile/Desktop Theme as default. 
+- Theme has a slide in left menu and a fixed right menu.
+
 powcms.zip v0.8 - 2017-10-07
 - Added backup of pages into SQLite database.
 - Added zipping of entire folder trees, ready to mail and share with other POW CMS systems
