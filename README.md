@@ -18,7 +18,6 @@ Get started with POW CMS and start editing pages
 
 
 Why POW CMS?
-
 The Portable Offline Web CMS (POW CMS) is a very easy way to build and view an offline web site. The goal with this project is to make a complete, simple and tiny HTML file based Page Editor and CMS with a web server system that is portable on a USB stick and requires no installation or setup.
 The project is more focused on making of web pages as easy as possible, compared to a complex online web server system. This package might be perfect for you - if you need a whole working web site for distribution - on a USB stick or by downloads, - if you write texts for the web, make web designs, make presentations anywhere. It is an entirely HTML file based web and a PHP backend based CMS system. All free for distribution. Licensed under LGPL and MIT.
 
