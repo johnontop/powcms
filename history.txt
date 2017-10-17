@@ -1,4 +1,4 @@
-Version History and Project objectives
+ Version History and Project objectives
 
 Project goals for POW CMS
 - Make a folder/file based HTML Editor & CMS that creates a HTML file based web site.
@@ -17,23 +17,15 @@ Project goals for POW CMS
 - CMS shall work both Offline on a USB Stick and with Online Web Servers.
 - All resource files shall be easily updated. Therefore .js and .css files are kept in same ./res/folder.
 
-Main system files
-- pow-edit.php (Page Editor and Navigation file generator)
-- pow-scan.php (Page Search and Navigation generator)
-- pow-update.php (Simple updater for "system" files into pages sub folders - it runs hidden mode)
-- pow-login.php (Login for Page Editor)
-
-Remaining work and issues
-- Get TinyMCE spellchecker to work - spellchecker files are installed
-- Add image folder viewer for TinyMCE.
-- Finish translator pow-custom.php so it can generate translated files.
-- Fix page content with responisive page collapse.
-- Make SQLite page update for text revisions (done)
-- Make mini Blog the shows latest changes in a list.
-- Clean up and structure code in pow-edit.php when ideas are implemented
+powcms.zip v0.10 - 2017-10-17
+- Added create desktop shortcut in start.bat
+- Added setting for TinyMCE spellchecker in user-pass.php
+- Added qTip2 for Tooltip bubbles in Page Editor
+- Added Layout faq.html
+- Mobile X 3 Column Theme is now default.
 
 powcms.zip v0.9 - 2017-10-09
-- Added a first version 3 Column Mobile/Desktop Theme as default. 
+- Added a first version 3 Column Mobile/Desktop Theme as default.
 - Theme has a slide in left menu and a fixed right menu.
 
 powcms.zip v0.8 - 2017-10-07
