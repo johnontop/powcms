@@ -3,7 +3,9 @@ Portable Offline Web CMS Demo - What You See Is What You Get
 View the online demo here.
 https://powcms.000webhostapp.com/
 
-I was searching the web for a good HTML editor, but couldn't find one. So I ended up making a HTML editor, that became much more - a full CMS. POW CMS is a unique and minimalistic, full featured HTML Editor and Web Site builder "application". POW CMS is under development, but it is fully functional. You can start to build your Portable Offline Web Site today. Download and get this complete demo website with this tiny but effective system - from Github.
+The worlds most advanced HTML editor with more than 100 million users.
+
+I was searching the web for a good HTML editor for local PC use, but couldn't find one. So I ended up making a HTML Page Editor with TinyMCE, the worlds most advanced HTML editor, used on more than 100 million websites. But the project became much more - a full CMS. POW CMS is now a unique and minimalistic, full featured HTML Editor and Web Site builder "application" with more features under development. Start to build your Portable Offline Web Site today. Download and get this complete demo website - from Github.
 
 
 Get started with POW CMS and start editing pages
