@@ -17,9 +17,10 @@ Project goals for POW CMS
 - CMS shall work both Offline on a USB Stick and with Online Web Servers.
 - All resource files shall be easily updated. Therefore .js and .css files are kept in same ./res/folder.
 
-powcms.zip v0.11 - 2017-10-26
+powcms.zip v0.11 - 2017-10-28
 - Added start.exe - a compiled version of start.bat
 - Added CreateDistribution.bat - that will create a new installation of POWCMS.
+- Updating Username & Password now works from Customize. (more work needed though)
 
 powcms.zip v0.10 - 2017-10-17
 - Added create desktop shortcut in start.bat
