@@ -1,7 +1,7 @@
-POW CMS Demo
 Portable Offline Web CMS Demo - What You See Is What You Get
 
-View the online demo here.
+If you are writing text for the web, this text editor might be perfect for you.
+View the online demo of the Page Editor & Content Management System here.
 https://powcms.000webhostapp.com/
 
 The worlds most popular HTML editor with more than 100 million users.
