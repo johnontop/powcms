@@ -15,4 +15,4 @@
 <p>Start Page with System Update</p>
 <p><img src="pow-scan.png" alt="System Updater" width="768" /></p>
 <p>Admin for SQLite Database</p>
-<p><img src="sysinfo/pow-sqlite.png" alt="System Updater" width="768" /></p>
+<p><img src="pow-sqlite.png" alt="System Updater" width="768" /></p>
