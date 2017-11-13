@@ -17,11 +17,21 @@ Project goals for POW CMS
 - CMS shall work both Offline on a USB Stick and with Online Web Servers.
 - All resource files shall be easily updated. Therefore .js and .css files are kept in same ./res/folder.
 
+powcms.zip v1.0 - 2017-11-12
+- Added POW-Mini, a stripped down version with only the needed files for online publishing. Less tha 1MB size
+- Just drag folder trees with web pages from POWCMS to POW-Mini + a couple of other files to publish online.
+- Changed pow-search.htm file name to search.htm to match other search resource files.
+- Added check boxes for enabling functions in pow-customize.php and include file user-pass.php
+- Translation of Page Editor UI is now possible. Translation files in /theme folder for now
+- Added translation selection in settings in user-pass.php
+- Skipped translations of Text and Tooltip strings in the Page Editor, until it is requested by someone.
+- Minor fixes here and there
+
 powcms.zip v0.11 - 2017-10-28
 - Added CreateDistribution.bat - that will create a new installation of POWCMS.
-- Multiple installations of POWCMS is possible. Previous web server is alwats terminated when launching new POWCMS
+- Multiple installations of POWCMS is possible. Previous web server is always terminated when launching new POWCMS.
 - Added start.exe - a compiled version of start.bat
-- Start.exe creates desktop shortcut using folder name for each POWCMS installation 
+- Start.exe creates desktop shortcut using folder name for each POWCMS installation.
 - Updating Web Page settings, Username & Password now works from Customize. (more work with translation needed)
 - Combined the 6 CSS files for Mobile-X Theme into 1 CSS file.
 
