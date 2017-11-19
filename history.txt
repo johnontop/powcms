@@ -17,6 +17,16 @@ Project goals for POW CMS
 - CMS shall work both Offline on a USB Stick and with Online Web Servers.
 - All resource files shall be easily updated. Therefore .js and .css files are kept in same ./res/folder.
 
+powcms.zip v1.01 - 2017-11-19
+- Added web page refresh function and icon in auto generated side menu (pow-scan.php)
+- Removed showing System folders from auto generated side menu by System Update (pow-scan.php)
+- Moved demo "Products" to sysinfo folder.
+- Cleaned up Theme folder from icon images. Moved the to respective folders.
+- Moved Version History and Licenses to footer.
+- Added 2 sticky pages (Customize and Distribute) below links in right menu (side-pages.htm)
+- Improved Help & Info pages
+- Started to work on a hybrid PHP/HTML script for user feedback.
+
 powcms.zip v1.0 - 2017-11-12
 - Added POW-Mini, a stripped down version with only the needed files for online publishing. Less tha 1MB size
 - Just drag folder trees with web pages from POWCMS to POW-Mini + a couple of other files to publish online.
