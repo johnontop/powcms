@@ -3,9 +3,9 @@
 Project goals for POW CMS
 - Make a folder/file based HTML Editor & CMS that creates a HTML file based web site.
 - CMS shall work on 32bit/64bit Windows XP and Windows 7/8/10 systems.
-- Code and system shall be extreamly minimalistic. Few system files. One system function = One file.
+- Code and system shall be extremely minimalistic. Few system files. One system function = One file.
 - Portable CMS. No installation. No setup. Just One click and site launches.
-- No expternal depencencies. Complete CMS, Web server, PHP, jQuery and other needed files in one ZIP file. (~12MB zipped)
+- No external dependencies. Complete CMS, Web server, PHP, jQuery and other needed files in one ZIP file. (~12MB zipped)
 - Use "modern" techniques like PHP, javascript, Ajax, jQuery, Bootstrap plus portable MySQL/SQLIte as options.
 - Word Processor - TinyMCE HTML editor for editing HTML files.
 - Easy navigation with search and blog functions to edit files.
@@ -17,6 +17,11 @@ Project goals for POW CMS
 - CMS shall work both Offline on a USB Stick and with Online Web Servers.
 - All resource files shall be easily updated. Therefore .js and .css files are kept in same ./res/folder.
 
+powcms.zip v1.02 - 2017-11-20
+- Added strings in Customize and fixed bugs. Now all strings can be customized.
+- Implemented customizable strings in index.htm and search.htm
+- Improved Footer with POW CMS version and translations.
+
 powcms.zip v1.01 - 2017-11-19
 - Added web page refresh function and icon in auto generated side menu (pow-scan.php)
 - Removed showing System folders from auto generated side menu by System Update (pow-scan.php)
@@ -25,7 +30,7 @@ powcms.zip v1.01 - 2017-11-19
 - Moved Version History and Licenses to footer.
 - Added 2 sticky pages (Customize and Distribute) below links in right menu (side-pages.htm)
 - Improved Help & Info pages
-- Started to work on a hybrid PHP/HTML script for user feedback.
+- Started to work on a feedback hybrid PHP/HTML script for user feedback.
 
 powcms.zip v1.0 - 2017-11-12
 - Added POW-Mini, a stripped down version with only the needed files for online publishing. Less tha 1MB size
