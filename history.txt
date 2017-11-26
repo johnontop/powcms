@@ -17,9 +17,18 @@ Project goals for POW CMS
 - CMS shall work both Offline on a USB Stick and with Online Web Servers.
 - All resource files shall be easily updated. Therefore .js and .css files are kept in same ./res/folder.
 
+powcms.zip v1.11 - 2017-11-26
+- Improved Module Feedback to make it more "general"
+- Added filter on message type, name, in Module Feedback.
+- Added fields Title, Website, in Module Feedback.
+- Added edit functions edit and hide, when logged in, in Module Feedback.
+- Added popup with Terms demo text, in Module Feedback.
+- Added FAQ pull down info, in Module Feedback.
+- Small fixed in CSS here and there.
+
 powcms.zip v1.10 - 2017-11-24
 - First "Module" added - Feedback script with PHP/SQLite and jQuery validation.
-- New icon handling for browser and desktop in themes. Favicon contains images for 16,23,64 pixel icons
+- New icon handling for browser and desktop in themes. Favicon contains images for 16,32,64 pixel icons
 - Moved new favicon.ico to theme folder. Added link in index.htm.
 - Removed desktop_icon.ico - changed to favicon in start.bat
 - Modified start.bat and compiled new start.exe
