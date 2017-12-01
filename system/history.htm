@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Version History</title>
+<style>
+body {  
+  background-color: #fafafa ;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.colorbox-iframe .content {
+  background-color: #f0f;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+</style>
+</head>
+
+<body>
+<b>Version History and Project objectives</b><br>
+
+<br><b>Project goals for POW CMS</b><br>
+- Make a folder/file based HTML Editor & CMS that creates a HTML file based web site.<br>
+- CMS shall work on 32bit/64bit Windows XP and Windows 7/8/10 systems.<br>
+- Code and system shall be extremely minimalistic. Few system files. One system function = One file.<br>
+- Portable CMS. No installation. No setup. Just One click and site launches.<br>
+- No external dependencies. Complete CMS, Web server, PHP, jQuery and other needed files in one ZIP file. (~12MB zipped)<br> 
+- Use "modern" techniques like PHP, javascript, Ajax, jQuery, Bootstrap plus portable MySQL/SQLIte as options.<br>
+- Word Processor - TinyMCE HTML editor for editing HTML files.<br>
+- Easy navigation with search and blog functions to edit files.<br>
+- Theme/Templates/Page designs switching funtion for admin.<br>
+- Language switching and translation funtion for admin.<br>
+- Simple Login for admins.<br>
+- An intuitive user experience. It shall only take minutes before creating the first web page.<br> 
+- Easy to create and distribute a small HTML based web site, via a ZIP file.<br>
+- CMS shall work both Offline on a USB Stick and with Online Web Servers.<br>
+- All resource files shall be easily updated. Therefore .js and .css files are kept in same ./res/folder.<br>
+
+<br><b>powcms.zip v1.11 - 2017-11-26</b><br>
+- Improved Module Feedback to make it more "general"<br> 
+- Added filter on message type, name, in Module Feedback.<br>
+- Added fields Title, Website, in Module Feedback.<br>
+- Added edit functions edit and hide, when logged in, in Module Feedback.<br>
+- Added popup with Terms demo text, in Module Feedback.<br>
+- Added FAQ pull down info, in Module Feedback.<br> 
+- Small fixed in CSS here and there.<br>
+
+<br><b>powcms.zip v1.10 - 2017-11-24</b><br>
+- First "Module" added - Feedback script with PHP/SQLite and jQuery validation.<br>
+- New icon handling for browser and desktop in themes. Favicon contains images for 16,32,64 pixel icons<br>
+- Moved new favicon.ico to theme folder. Added link in index.htm.<br>
+- Removed desktop_icon.ico - changed to favicon in start.bat<br>
+- Modified start.bat and compiled new start.exe<br>
+
+<br><b>powcms.zip v1.02 - 2017-11-20</b><br>
+- Added strings in Customize and fixed bugs. Now all strings can be customized.<br>
+- Implemented customizable strings in index.htm and search.htm<br>
+- Improved Footer with POW CMS version and translations.<br>
+
+<br><b>powcms.zip v1.01 - 2017-11-19</b><br>
+- Added web page refresh function and icon in auto generated side menu (pow-scan.php)<br>
+- Removed showing System folders from auto generated side menu by System Update (pow-scan.php)<br>
+- Moved demo "Products" to sysinfo folder.<br>
+- Cleaned up Theme folder from icon images. Moved the to respective folders.<br> 
+- Moved Version History and Licenses to footer.<br>
+- Added 2 sticky pages (Customize and Distribute)  below links in right menu (side-pages.htm)<br>
+- Improved Help & Info pages<br>
+- Started to work on a feedback hybrid PHP/HTML script for user feedback.<br>
+
+<br><b>powcms.zip v1.0 - 2017-11-12</b><br>
+- Added POW-Mini, a stripped down version with only the needed files for online publishing. Less tha 1MB size<br>
+- Just drag folder trees with web pages from POWCMS to POW-Mini + a couple of other files to publish online.<br>
+- Changed pow-search.htm file name to search.htm to match other search resource files.<br>
+- Added check boxes for enabling functions in pow-customize.php and include file user-pass.php<br>
+- Translation of Page Editor UI is now possible. Translation files in /theme folder for now<br>
+- Added translation selection in settings in user-pass.php<br>
+- Skipped translations of Text and Tooltip strings in the Page Editor, until it is requested by someone.<br>
+- Minor fixes here and there<br>
+
+<br><b>powcms.zip v0.11 - 2017-10-28</b><br>
+- Added CreateDistribution.bat - that will create a new installation of POWCMS.<br>
+- Multiple installations of POWCMS is possible. Previous web server is always terminated when launching new POWCMS.<br>
+- Added start.exe - a compiled version of start.bat<br>
+- Start.exe creates desktop shortcut using folder name for each POWCMS installation.<br> 
+- Updating Web Page settings, Username & Password now works from Customize. (more work with translation needed)<br>
+- Combined the 6 CSS files for Mobile-X Theme into 1 CSS file.<br>
+
+<br><b>powcms.zip v0.10 - 2017-10-17</b><br>
+- Added create desktop shortcut in start.bat<br>
+- Added setting for TinyMCE spellchecker in user-pass.php<br>
+- Added qTip2 for Tooltip bubbles in Page Editor<br>
+- Added Layout faq.html<br>
+- Mobile X 3 Column Theme is now default.<br>
+
+
+<br><b>powcms.zip v0.9 - 2017-10-09</b><br>
+- Added a first version 3 Column Mobile/Desktop Theme as default.<br>
+- Theme has a slide in left menu and a fixed right menu.<br>
+
+<br><b>powcms.zip v0.8 - 2017-10-07</b><br>
+- Added backup of pages into SQLite database.<br>
+- Added zipping of entire folder trees, ready to mail and share with other POW CMS systems<br>
+- Customize in Page Editor menu, now changes site name and create translation file.<br>
+- Added 5 more Layout templates for Page Editor. Portfolio layouts for insertion into pages.<br>
+- Added 2 demo folders, products and organization to show some layout templates avaliable.<br>
+- Left Side Menu now has accordion mode<br>
+- Small fixes here and there.<br>
+
+<br><b>powcms.zip v0.7 - 2017-10-01</b><br>
+- Added folder menu scan depth to 3 subfolders,but only show 2 in side menu.<br>
+- Added global copying of index.htm and pow-edit.php to pow-scan.php<br>
+- Added image upload and drag & drop in TinyMCE.<br>
+- Added HTML template folder and browsing of template layouts and insertion into TinyMCE textarea<br>
+- Added Social Share Icons in index.htm<br>
+- Added Bootstrap CSS to TinyMCE HTML Editor<br>
+- Started to add @media for responsive functionality<br>
+- Worked on Info & Help pages.<br>
+- Added Page Templates that uses 5MB in ZIP<br>
+
+<br><b>powcms.zip v0.6 - 2017-09-23 </b><br>
+- 3 column page, with 2 side columns is now default page.<br>
+- System Update now scans 2 folder levels and check if text exist and builds side menu.<br>
+- The jQuery Dropdown Side Menu now shows folder name or page title if it exists.<br>
+- Added feature create folder directly and show the folder for editing in the Page Editor.<br>
+- Added some color bars to the header-image to show possibility of header image and overlay text combined.<br>
+- Started to create a skin (polly) with color icons for the Page Editor.<br>
+
+<br><b>powcms.zip v0.5 - 2017-09-22 </b><br>
+- Added a Side - Menu Navgoco jQuery menu for a new 3 column page template.<br>
+- Added a Site Map generator to pow-scan.php for Side Menu<br> 
+- Added modal popup in index.htm for "System Update"<br>
+- Addeb Menu generator - pow-scan.php now scans all folders and create side-folder.htm files in each directory.<br>
+- pow-scan-php reads sub folders index_vars.js - title tag and inserts national UTF-8 chars into side-folders.htm<br>
+- Added spellcheker for TinyMCE, but didn't get it to work according to TinyMCE instructions.<br>
+- Moved files around to get Theme Changer and translations to work.<br>
+- Began to work on a system Translator (pow-custom.php) that will generate files with translation.<br>
+- Made a German version of the default theme and a custom theme to show differences.<br>
+- Changed paths in pow-files so the site can be uploaded to an online web servers root folder.<br> 
+- Login now sets cookie "root" path that is used for pow-edit.php files<br> 
+- Added phpLiteAdmin for SQLite database admin.<br>
+- View PHP info in Login<br>
+- Added hidden folder dev for experimental files. Folders res and system are also hidden in menues.<br>
+
+<br><b>powcms.zip v0.4 - 2017-09-11 </b><br>
+- pow-update.php runs CopyFiles.bat hidden.<br>
+- pow-scan.php detects and shows folders content and also shows "Tag Word" that can be edited.<br>
+- pow-scan.php, fixed links for folder names with space char.<br>
+- Added pow-scan.php to "Top Menu" as a Site Map, even though it is PHP based.<br>
+- Edit sub sfolder pages directly from Page Editor<br>
+- Added button for page edit in pow-scan.php<br>
+- Added footer with copyright notice<br>
+- Added pow-vars.js with system variables for file index.htm with header-title, copyright and more<br>
+- Moved MySQL and SQLite from system folder to a separate zip powcms-sql.zip<br>
+- In Page Editor, "Update Folders" now runs CopyFiles.bat hidden, then runs pow-scan.php to "Update Search" function.<br>
+- Added modal popup when "Update Folders" is ran, with info to the user about what's happening. <br>
+- Added Roboto web font from FontSquirrel. Font weights 200, 300, 500, 600 skipped fat black.<br>
+- Added embryo for language translations in pow-vars.js - translate in folders /res/language/xx/<br>
+- Fixed Think that UTF-8 national character with Tag Search together with Tipue Searched finally is fixed.<br> 
+- Added Encode Explorer as content file viewer.<br>
+- Added PHPliteadmin for SQLite database management.<br> 
+
+<br><b>powcms.zip v0.3 - 2017-09-10 </b><br>
+- Added Search by Tag Words. Tag words file is updated by pow-scan.php<br>
+- Fixed Search Scan by filter out a strange character.<br>
+- Moved password setting to system folder user-pass.php<br>
+
+<br><b>powcms.zip v0.2 - 2017-09-10</b><br>
+- Cleaned up code in editor pow-edit<br>
+- Editor now auto loads the html file specified in index_vars.js<br>
+- Fixed reading and writing of HTML files in UTF--8 format?<br>
+- Prepared pow-edit.php and index_vars.js for a new variable, Author:<br>
+- Added date-time picker in CMS Page Editor for variable "date".<br>
+- Added pow-update.php, simple updater for needed folder files.<br>
+- Added version history file "history.htm"<br>
+
+<br><b>powcms.zip v0.1 - 2017-09-09</b><br>
+- Initital release on Github.<br>
+- CMS, system and code working, but messy<br>
+
+</body>
+</html>
