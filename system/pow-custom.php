@@ -1,11 +1,9 @@
 <?php
 ini_set('display_errors', '0'); 
 ini_set('default_charset', 'UTF-8');
-//header("Content-type: text/html; charset=utf-8; encoding=utf-8;");
-//header("Content-type: text/html; charset=utf-8; ");            
 
-/* COOKIE LOGIN CHECK - This will chack valid username and passwords - Change password in system/user-pass.php*/
-include 'system/user-pass.php' ;
+/* COOKIE LOGIN CHECK - This will chack valid username and passwords - Change password in system/pow-config.php*/
+include 'pow-config.php' ;
 
 if (isset($_COOKIE['username']) && isset($_COOKIE['password'])) {
     
@@ -33,11 +31,25 @@ include $root . '/theme/translation.'.$lang_code.'.php';
 
   <title>POW Customize & Translate</title>
   
-   <!-- Bootstrap -->
+  <!-- Bootstrap -->
+<?php if(file_exists($root.'res/bootstrap/bootstrap.min.css')) { ;?>  
    <link href="/res/bootstrap/bootstrap.min.css" rel="stylesheet">  
+  <?php } else { ;?> 
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<?php } ;?>   
    
-    <!-- Custom Fonts --> 
-    <link href="/res/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> 
+  <!-- Custom Fonts -->          
+<?php if(file_exists('$root.res/font-awesome/css/font-awesome.min.css')) { ;?>  
+    <link href="/res/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">  
+  <?php } else { ;?> 
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<?php } ;?>
+
+<?php if(file_exists($root.'res/font-roboto/roboto.css')) { ;?>  
+    <link href="/res/font-roboto/roboto.css" rel="stylesheet">   
+  <?php } else { ;?> 
+    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+<?php } ;?>     
    
     <!-- Custom styles for index.htm wrapper page -->
     <link href="/theme/default.css" rel="stylesheet">
@@ -223,8 +235,12 @@ https://www.computerhope.com/htmcolor.htm
 }
     </style>
     
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins and reading files via index_vars.js) -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins and reading files via index_vars.js) -->    
+<?php if(file_exists($root.'res/js/jquery.min.js')) { ;?>  
     <script src="/res/js/jquery.min.js"></script>
+  <?php } else { ;?> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<?php } ;?>       
     
     <!-- Colorbox jQuery CSS for html popu wih iframes, image slide shows, picture viewing -->
     <link href="/res/colorbox/colorbox.css" rel="stylesheet"> 
@@ -486,7 +502,7 @@ fclose($system_trans);
         
 		<div>
 		  <label class="vars-input" for="name" title=""><i class="fa fa-info-circle" ></i> POW CMS Version - (pow-vars.js)</label><br>
-			<input id="title" name="title" class="element" type="text" maxlength="255" size="32" value="<?php echo "v1.11" ;?>"/> 			
+			<input id="title" name="title" class="element" type="text" maxlength="255" size="32" value="<?php echo "v1.12" ;?>"/> 			
       <input id="title" name="system_version" class="element" type="text" maxlength="255" size="32" value="<?php echo $system_version ;?>"/>
 		</div>
 		           		
@@ -621,7 +637,7 @@ $editor = "pow-tinymce-inc.php"; // select HTML Editor
 $lang_code = "'.$language.'"; // Language code for translation
 ?>           ' ;
         
-$user_pass_file  = fopen("system/user-pass.php", "w") or die("Unable to open file user_pass.php"); 
+$user_pass_file  = fopen("pow-config.php", "w") or die("Unable to open file pow-config.php");  
 fwrite($user_pass_file, pack("CCC",0xef,0xbb,0xbf));  
 //fwrite($index_vars, utf8_encode($index_text));
 fwrite($user_pass_file, $user_pass_text);
@@ -636,17 +652,17 @@ fclose($user_pass_file);
 		
 		<h4>User & System Settings</h4>
 		<div>
-		  <label class="vars-input" for="name" title=""><i class="fa fa-info-circle" ></i> Username - (user-pass.php)</label><br>
+		  <label class="vars-input" for="name" title=""><i class="fa fa-info-circle" ></i> Username - (pow-config.php)</label><br>
 			<input id="user" name="user" class="element" type="text" maxlength="255" size="32" value="<?php echo $user ;?>"/> 			
 		</div> 
 		
 		<div>
-		  <label class="vars-input" for="name" title=""><i class="fa fa-info-circle" ></i> Password - (user-pass.php)</label><br>
+		  <label class="vars-input" for="name" title=""><i class="fa fa-info-circle" ></i> Password - (pow-config.php)</label><br>
 			<input id="pass" name="pass" class="element" type="text" maxlength="255" size="32" value="<?php echo $pass ;?>"/> 			      
 		</div> 		
     
 		<div>
-		  <label class="vars-input" for="sqlite" title=""><i class="fa fa-info-circle" ></i> SQLite enable/disable - (user-pass.php)</label><br>      			 
+		  <label class="vars-input" for="sqlite" title=""><i class="fa fa-info-circle" ></i> SQLite enable/disable - (pow-config.php)</label><br>      			 
 		<?php
         if($sqlite != 0){
         echo "SQLite Save <input type='checkbox' name='sqlite' value='1' checked='checked'/>";
@@ -658,7 +674,7 @@ fclose($user_pass_file);
 		</div>
 		
 		<div>
-		  <label class="vars-input" for="spellcheck" title=""><i class="fa fa-info-circle" ></i> Spellcheck enable/disable - (user-pass.php)</label><br>			 
+		  <label class="vars-input" for="spellcheck" title=""><i class="fa fa-info-circle" ></i> Spellcheck enable/disable - (pow-config.php)</label><br>			 
  		<?php
         if($spellcheck != 0){
         echo "Spellchecker <input type='checkbox' name='spellcheck' value='1' checked='checked'/>";
@@ -670,7 +686,7 @@ fclose($user_pass_file);
 		</div>			      	
     
    	<div>
-		  <label class="vars-input" for="tooltip" title=""><i class="fa fa-info-circle" ></i> Tooltip enable/disable - (user-pass.php)</label><br>			
+		  <label class="vars-input" for="tooltip" title=""><i class="fa fa-info-circle" ></i> Tooltip enable/disable - (pow-config.php)</label><br>			
  		<?php
         if($tooltip != 0){
         echo "Tooltip <input type='checkbox' name='tooltip' value='1' checked='checked'/>";
@@ -682,30 +698,30 @@ fclose($user_pass_file);
 		</div>	
 		
 		<div>
-		  <label class="vars-input" for="editor" title=""><i class="fa fa-info-circle" ></i> HTML Editor - (No Option Yet) (user-pass.php)</label><br>
+		  <label class="vars-input" for="editor" title=""><i class="fa fa-info-circle" ></i> HTML Editor - (No Option Yet) (pow-config.php)</label><br>
 			<input id="pass" name="editor" class="element" type="text" maxlength="255" size="32" value="<?php echo "pow-tinymce-inc.php" ;?>"/> 			      
 		</div> 		
     
     <h4>FTP Settings</h4>    
 		<div>
-		  <label class="vars-input" for="name" title=""><i class="fa fa-info-circle" ></i> FTP Host IP - (user-pass.php)</label><br>
+		  <label class="vars-input" for="name" title=""><i class="fa fa-info-circle" ></i> FTP Host IP - (pow-config.php)</label><br>
 			<input id="ftp_host" name="ftp_host" class="element" type="text" maxlength="255" size="32" value="<?php echo $ftp_host ;?>"/> 			      
 		</div>
 		
 		<div>
-		  <label class="vars-input" for="name" title=""><i class="fa fa-info-circle" ></i> FTP Username - (user-pass.php)</label><br>
+		  <label class="vars-input" for="name" title=""><i class="fa fa-info-circle" ></i> FTP Username - (pow-config.php)</label><br>
 			<input id="ftp_user" name="ftp_user" class="element" type="text" maxlength="255" size="32" value="<?php echo $ftp_user ;?>"/> 			      
 		</div>
 
 		<div>
-		  <label class="vars-input" for="name" title=""><i class="fa fa-info-circle" ></i> FTP Password - (user-pass.php)</label><br>
+		  <label class="vars-input" for="name" title=""><i class="fa fa-info-circle" ></i> FTP Password - (pow-config.php)</label><br>
 			<input id="ftp_pass" name="ftp_pass" class="element" type="text" maxlength="255" size="32" value="<?php echo $ftp_pass ;?>"/> 			      
 		</div>
 		
 		<div>
-		<label class="vars-input" for="lang_code" title=""><i class="fa fa-info-circle" ></i> Language Code - (user-pass.php)</label><br>
+		<label class="vars-input" for="lang_code" title=""><i class="fa fa-info-circle" ></i> Language Code - (pow-config.php)</label><br>
       <select name="lang_code" id="language">
-        <option value="">Select Language + code</option>
+        <option value="en">Select Language + code</option>
         <option value="custom">Custom</option>
         <option value="en">English - en</option>
         <option value="de">German - de</option>
@@ -802,10 +818,12 @@ var downloadTimer = setInterval(function(){
 }
 </script>
 
-
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="/res/bootstrap/bootstrap.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+<?php if(file_exists($root.'res/bootstrap/bootstrap.min.js')) { ;?>  
+    <script src="/res/bootstrap/bootstrap.min.js"></script>  
+  <?php } else { ;?> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<?php } ;?>
 
 </body>
 </html> 

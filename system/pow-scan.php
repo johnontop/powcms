@@ -171,15 +171,42 @@ ob_end_clean();
     <meta name="viewport" content="width=device-width, initial-scale=1">    
     <title>File Scanner</title>
    
-    <!-- Custom Fonts --> 
-    <link href="/res/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">    
-    
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins and reading files via index_vars.js) -->
-    <script src="/res/js/jquery.min.js"></script>    
-    
+  <!-- Bootstrap -->
+<?php if(file_exists($root.'res/bootstrap/bootstrap.min.css')) { ;?>  
+   <link href="/res/bootstrap/bootstrap.min.css" rel="stylesheet">  
+  <?php } else { ;?> 
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<?php } ;?>   
+   
+  <!-- Custom Fonts -->          
+<?php if(file_exists($root.'res/font-awesome/css/font-awesome.min.css')) { ;?>  
+    <link href="/res/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">  
+  <?php } else { ;?> 
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<?php } ;?>
+
+<?php if(file_exists($root.'res/font-roboto/roboto.css')) { ;?>  
+    <link href="/res/font-roboto/roboto.css" rel="stylesheet">   
+  <?php } else { ;?> 
+    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+<?php } ;?>  
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins and reading files via index_vars.js) -->    
+<?php if(file_exists($root.'res/js/jquery.min.js')) { ;?>  
+    <script src="/res/js/jquery.min.js"></script>
+  <?php } else { ;?> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<?php } ;?>    
+  
+    <!-- Custom styles for index.htm wrapper page -->
+    <link href="/theme/default.css" rel="stylesheet">
+    <link href="/theme/custom.css" rel="stylesheet"> 
+    <link href="/system/edit-mode.css" rel="stylesheet">
+        
 <style>
 body {
 	margin: 0;
+	margin-top: 60px;
 	padding: 0;
 	font: normal 14px Arial;
 	color: #666;
@@ -339,10 +366,10 @@ h4 {
      background-image: linear-gradient(top, #f3f3f3, #ddd);
             
     border: 1px solid #777;
-    padding-top: 4px;
+    padding-top: 2px;
     padding-right: 8px;
-    padding-bottom: 4px;
-    padding-left: 38px;
+    padding-bottom: 2px;
+    padding-left: 34px;
     margin: 0.2em;
     font: Roboto, Arial, Helvetica;
     font-weight:400;
@@ -374,15 +401,7 @@ h4 {
 }
 
 </style>
-
-    <!-- Bootstrap -->
-    <link href="/res/bootstrap/bootstrap.min.css" rel="stylesheet"> 
- 
-    <!-- Custom styles for index.htm wrapper page -->
-    <link href="/theme/default.css" rel="stylesheet">
-    <link href="/theme/custom.css" rel="stylesheet"> 
-    <link href="/system/edit-mode.css" rel="stylesheet">
-    
+   
       <!-- Do NOT change these rows - reads system variables -->
       <script src="index_vars.js"></script>
       <script src="/pow_vars.js"></script>     
@@ -475,10 +494,12 @@ echo $tmp;
 ?>
 </div>
 
- 
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="/res/bootstrap/bootstrap.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+<?php if(file_exists($root.'res/bootstrap/bootstrap.min.js')) { ;?>  
+    <script src="/res/bootstrap/bootstrap.min.js"></script>  
+  <?php } else { ;?> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<?php } ;?>
 
 </body>
 </html>

@@ -5,7 +5,7 @@ define("ROOT", __DIR__ ."/");
 setcookie('root', ROOT, time()+60*60*24*365 ); 
 
 /* These are our valid username and passwords */
-include 'system/user-pass.php' ;
+include 'pow-config.php' ;
 $msg = 'Please enter a username and password.';
 
   if (isset($_POST['logout'])) {
@@ -69,23 +69,37 @@ $msg = 'Please enter a username and password.';
     <meta name="viewport" content="width=device-width, initial-scale=1">  
     <title id="title">Index</title>  
 
-    <!-- Bootstrap -->
-     <link href="/res/bootstrap/bootstrap.min.css" rel="stylesheet"> 
-    <!--
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Bootstrap -->
+<?php if(file_exists($root.'res/bootstrap/bootstrap.min.css')) { ;?>  
+   <link href="/res/bootstrap/bootstrap.min.css" rel="stylesheet">  
+  <?php } else { ;?> 
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<?php } ;?>   
+   
+  <!-- Custom Fonts -->          
+<?php if(file_exists('$root.res/font-awesome/css/font-awesome.min.css')) { ;?>  
+    <link href="/res/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">  
+  <?php } else { ;?> 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-     -->
-    
-    <!-- Custom Fonts --> 
-    <link href="/res/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">    
-    <link href="/res/font-roboto/roboto.css" rel="stylesheet"> 
+<?php } ;?>
+
+<?php if(file_exists($root.'res/font-roboto/roboto.css')) { ;?>  
+    <link href="/res/font-roboto/roboto.css" rel="stylesheet">   
+  <?php } else { ;?> 
+    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+<?php } ;?>     
+
      
     <!-- Custom styles for index.htm wrapper page -->
     <link href="/theme/default.css" rel="stylesheet">
     <link href="/theme/custom.css" rel="stylesheet">  
     
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins and reading files via index_vars.js) -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins and reading files via index_vars.js) -->    
+<?php if(file_exists($root.'res/js/jquery.min.js')) { ;?>  
     <script src="/res/js/jquery.min.js"></script>
+  <?php } else { ;?> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<?php } ;?>    
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
