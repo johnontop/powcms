@@ -4,10 +4,10 @@ ini_set('default_charset', 'UTF-8');
 date_default_timezone_set('Europe/Berlin');
 
 /*  http://yagudaev.com/posts/resolving-php-relative-path-problem/ */
-$root = $_COOKIE['root'];  
+$root = $_COOKIE['root']; 
 
-/* COOKIE LOGIN CHECK - for valid username and passwords - Change password in system/user-pass.php*/
-include  $root.'system/user-pass.php' ;
+/* COOKIE LOGIN CHECK - for valid username and passwords - Change password in /pow-config.php*/
+include  $root.'pow-config.php' ;
 
 if (isset($_COOKIE['username']) && isset($_COOKIE['password'])) {
     
@@ -20,19 +20,23 @@ if (isset($_COOKIE['username']) && isset($_COOKIE['password'])) {
     header('Location: /pow-login.php');    
   } // END COOKIE LOGIN CHECK
   
-include $root . '/theme/translation.'.$lang_code.'.php';
+include $root . 'theme/translation.'.$lang_code.'.php';
 
 rename('index_vars.txt', 'index_vars.js'); // renames incoming index_vars.txt in zip
 
-if ($sqlite == 1){  // check ig sqlite is enbled in user-pass.php
-$db_file = $root.'/system/sqlite/powcms.db';
+if ($sqlite == 1){  // check ig sqlite is enbled in pow-config.php
+$db_file = $root.'system/sqlite/powcms.db';
 $db = new SQLite3($db_file);
    if(!$db) {
-      echo $db->lastErrorMsg();
+      $message = "No database " . $db->lastErrorMsg();
    } else {
       $message = "Opened SQLite database";
    }
-}   
+} 
+
+if ($sqlite == 0){  // check ig sqlite is enbled in pow-config.php  
+  $message = "SQLite database is disabled";
+} 
  
 ?>
 
@@ -43,13 +47,27 @@ $db = new SQLite3($db_file);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">  
 
-  <title>POW Editor v0.12</title>
+  <title>POW Editor v1.12</title>
   
-   <!-- Bootstrap -->
+  <!-- Bootstrap -->
+<?php if(file_exists($root.'res/bootstrap/bootstrap.min.css')) { ;?>  
    <link href="/res/bootstrap/bootstrap.min.css" rel="stylesheet">  
+  <?php } else { ;?> 
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<?php } ;?>   
    
-    <!-- Custom Fonts --> 
-    <link href="/res/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> 
+  <!-- Custom Fonts -->          
+<?php if(file_exists($root.'res/font-awesome/css/font-awesome.min.css')) { ;?>  
+    <link href="/res/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">  
+  <?php } else { ;?> 
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<?php } ;?>
+
+<?php if(file_exists($root.'res/font-roboto/roboto.css')) { ;?>  
+    <link href="/res/font-roboto/roboto.css" rel="stylesheet">   
+  <?php } else { ;?> 
+    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+<?php } ;?>      
    
     <!-- Custom styles for index.htm wrapper page -->    
     <link href="/theme/default.css" rel="stylesheet">   
@@ -234,8 +252,12 @@ https://www.computerhope.com/htmcolor.htm
 }
     </style>
     
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins and reading files via index_vars.js) -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins and reading files via index_vars.js) -->    
+<?php if(file_exists($root.'res/js/jquery.min.js')) { ;?>  
     <script src="/res/js/jquery.min.js"></script>
+  <?php } else { ;?> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<?php } ;?>    
     
     <!-- Colorbox jQuery CSS for html popu wih iframes, image slide shows, picture viewing -->
     <link href="/res/colorbox/colorbox.css" rel="stylesheet"> 
@@ -252,7 +274,7 @@ https://www.computerhope.com/htmcolor.htm
     
     <script src="index_vars.js"></script>
 
-<?php include  $root.'pow-tinymce-inc.php' ;   ;?>
+<?php include  $root.$editor ;?>
 
 
 
@@ -331,7 +353,7 @@ tinymce.get("savecontent").execCommand('mceInsertContent',false,'<br><img alt="$
 
     function getFilename () {
       var name = document.getElementById('fileInput'); 
-     var filename = '/templates/layouts/'+ name.value ;
+     var filename = '/layouts/'+ name.value ;
      // var filename = '/layouts/thumbnail.htm';  
      // alert('Selected file: ' + name.value);
       //alert(filename.value);
@@ -497,11 +519,11 @@ $saved = date("Y-m-d H:i") ;
 <input style="display: inline;display:none;" type="file" id="choose" name="load_file"  accept=".htm,.html" value="./">
 
 <input style="display: inline;" class="button blue-bg" type="submit" title="<?php echo tooltip_Load ;?>" value="<?php echo Load ;?>"> 
-Name: <input style="display: inline;" type="text" name="file_name" size="17" value="<?php echo $load_file ;?>" > 
+Name: <input style="display: inline;" type="text" name="file_name" size="15" value="<?php echo $load_file ;?>" > 
 <a href="#" class="iframe" form="form_word" onclick="location.href='index.htm';" ><img src="/res/view.png" title="Experimental popup view of doc"></a>
 <input form="form_word" class="button" type="submit" name="submit_word" title="Under development - but functional." value=" Word" />
-<a href="pow-update.php?action=ftp" class="button" title="Under development - not functional yet." >FTP</a>
 <a class="button" href="pow-edit.php?zip=1" title="Creates ZIP file with all sub folders" ">ZIP</a>
+<a class="button" href="pow-edit.php?nozip=1" title="Undo ZIP functions renaming of index_vars.js files in all sub folders" ">noZIP</a>
 <a class="button" href="javascript:;" title="Inserts Logo file: topbar-logo.png from /theme folder " onmousedown="addImage()">Insert Logo</a>
 
 <label for="fileInput" class="button blue-bg" title="Insert HTML text template into textarea" ><?php echo Layouts ;?></label>
@@ -889,7 +911,7 @@ jQuery.colorbox({width:"550px", height:"380px",html:'<div class="modal-body"><h3
             }, 7000)
             
 $.ajax({ 
-    url: "/pow-update.php",
+    url: "/pow-update.php?action=update",
     success: 
         function(data)
         {
@@ -910,8 +932,24 @@ var downloadTimer = setInterval(function(){
 }
 </script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="/res/bootstrap/bootstrap.min.js"></script>
+<script>
+$(document).keydown(function(e) {
+    if ((e.key == 's' || e.key == 'S' ) && (e.ctrlKey || e.metaKey))
+    {
+        e.preventDefault();
+        alert("Ctrl-s pressed");
+        return false;
+    }
+    return true;
+}); 
+</script>
+
+  <!-- Bootstrap Core JavaScript -->
+<?php if(file_exists($root.'res/bootstrap/bootstrap.min.js')) { ;?>  
+    <script src="/res/bootstrap/bootstrap.min.js"></script>  
+  <?php } else { ;?> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<?php } ;?>
 
 </body>
 </html> 
@@ -945,9 +983,6 @@ echo 'You can not zip the root folder: ' . basename($root) ;
 
 exit;
 }
-
-
-
 
 if($zipfiles==1) {
 echo 'Creating zip file: '. basename(__DIR__); //will return the current directory name only
@@ -1018,4 +1053,21 @@ $zip->close();
   if (isset($_GET['zip'])) {
     zipsub(2);
   }
+  
+
+// renames index_vars.js to index_vars.txt in file system  
+if (isset($_GET['nozip'])) {
+$path = realpath(__DIR__);
+$files = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path));
+foreach ($files as $name => $file)
+{
+	if ($file->isDir()) {		 	
+  	     rename($file.'/index_vars.txt', $file.'/index_vars.js'); // renames index_vars.js to index_vars.txt in zip         		           
+      //   echo $file . "<br>";
+      flush();           
+		  continue;
+	}
+}
+       
+}  
 ?>
