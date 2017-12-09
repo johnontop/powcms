@@ -17,24 +17,25 @@ body {
 </head>
 
 <body>
-<b>Version History and Project objectives</b><br>
+<h2>Version History and Project objectives</h2>
 
-<br><b>Project goals for POW CMS</b><br>
-- Make a folder/file based HTML Editor & CMS that creates a HTML file based web site.<br>
-- CMS shall work on 32bit/64bit Windows XP and Windows 7/8/10 systems.<br>
-- Code and system shall be extremely minimalistic. Few system files. One system function = One file.<br>
-- Portable CMS. No installation. No setup. Just One click and site launches.<br>
-- No external dependencies. Complete CMS, Web server, PHP, jQuery and other needed files in one ZIP file. (~12MB zipped)<br> 
-- Use "modern" techniques like PHP, javascript, Ajax, jQuery, Bootstrap plus portable MySQL/SQLIte as options.<br>
-- Word Processor - TinyMCE HTML editor for editing HTML files.<br>
-- Easy navigation with search and blog functions to edit files.<br>
-- Theme/Templates/Page designs switching funtion for admin.<br>
-- Language switching and translation funtion for admin.<br>
-- Simple Login for admins.<br>
-- An intuitive user experience. It shall only take minutes before creating the first web page.<br> 
-- Easy to create and distribute a small HTML based web site, via a ZIP file.<br>
-- CMS shall work both Offline on a USB Stick and with Online Web Servers.<br>
-- All resource files shall be easily updated. Therefore .js and .css files are kept in same ./res/folder.<br>
+<b>powcms.zip v1.12 - 2017-12-09</b><br>
+- Added Highslide javascript for popup images. Use class="highslide" and rel="highslide" in link for image popup.<br>
+- Fixed some responsive bugs (index.htm & mobile-x.css) for screen size less than 768px.<br>
+- Added function in pow-edit to rename index_vars.txt back to index_vars.js after zipping folders.<br>
+- Moved and renamed /system/user-pass.php to /pow-config.php to make config work better with POW Mini<br>
+- Moved folder Layouts to root. Layouts HTML files can be used directly within the Page Editor.<br>
+- Added folder Modules in root and folder SQLite with latest SQLite database to be viewed with PhpLiteAdmin.<br>
+- Added in TinyMCE setting "allow_unsafe_link_target" to prevent it from adding rel="noopener" when target="_blank" is used.<br>
+- Added in TinyMCE setting "extended_valid_elements" to allow more settings on code.<br>
+- Added Module POW updater, that uses cURL to download latest system file from GitHub<br>
+- Added Module Web Links, a variant of the improved Feedback Module.<br>
+- Made a modified theme for Colorbox image zoom and better support for different classes. Made a demo page for this.<br> 
+- Fixed CSS issues with top navbar menu in phone display mode.<br>
+- Added check in PHP files for files existence in /res folder so they work better with POW Mini<br>
+- Implementing fallback to online CDN resources for some JS and CSS files in PHP files for POW Mini.<br>
+- Added PHP files to POW Mini and made Page Editor and TinyMCE work with online CDN resources.<br> 
+- Added minimal TinyMCE resouce file "pow-tinymce-inc-min.php" in POW Mini for CDN.<br>
 
 <br><b>powcms.zip v1.11 - 2017-11-26</b><br>
 - Improved Module Feedback to make it more "general"<br> 
@@ -176,6 +177,24 @@ body {
 <br><b>powcms.zip v0.1 - 2017-09-09</b><br>
 - Initital release on Github.<br>
 - CMS, system and code working, but messy<br>
+
+<br><b>Project goals for POW CMS</b><br>
+- Make a folder/file based HTML Editor & CMS that creates a HTML file based web site.<br>
+- CMS shall work on 32bit/64bit Windows XP and Windows 7/8/10 systems.<br>
+- Code and system shall be extremely minimalistic. Few system files. One system function = One file.<br>
+- Portable CMS. No installation. No setup. Just One click and site launches.<br>
+- No external dependencies. Complete CMS, Web server, PHP, jQuery and other needed files in one ZIP file. (~12MB zipped)<br> 
+- Use "modern" techniques like PHP, javascript, Ajax, jQuery, Bootstrap plus portable MySQL/SQLIte as options.<br>
+- Word Processor - TinyMCE HTML editor for editing HTML files.<br>
+- Easy navigation with search and blog functions to edit files.<br>
+- Theme/Templates/Page designs switching funtion for admin.<br>
+- Language switching and translation funtion for admin.<br>
+- Simple Login for admins.<br>
+- An intuitive user experience. It shall only take minutes before creating the first web page.<br> 
+- Easy to create and distribute a small HTML based web site, via a ZIP file.<br>
+- CMS shall work both Offline on a USB Stick and with Online Web Servers.<br>
+- All resource files shall be easily updated. Therefore .js and .css files are kept in same ./res/folder.<br>
+
 
 </body>
 </html>
