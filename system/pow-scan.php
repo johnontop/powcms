@@ -657,6 +657,10 @@ foreach($directories as $directory){
               $get_tags  = file_get_contents($item['name'].'/'.$directory.'/index_vars.js'); 
               preg_match('|VARS.title = "(.*)"|', $get_tags, $match) ; 
               $title = $match[1];
+              
+              if (empty($title)){ 
+              $title = $directory ; 
+              }     
                                                                                                 
               $txt1 = '<li><a href="'.$directory.'">'.ucfirst($title).'</a></li>'. PHP_EOL;
               fwrite($myfile, $txt1);

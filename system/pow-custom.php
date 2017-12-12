@@ -303,6 +303,12 @@ $links_side = $match[1];
 preg_match('|VARS.page_top = "(.*)"|', $vars, $match) ;
 $page_top = $match[1];
 
+preg_match('|VARS.print_page = "(.*)"|', $vars, $match) ;
+$print_page = $match[1];
+
+preg_match('|VARS.copy_page = "(.*)"|', $vars, $match) ;
+$copy_page = $match[1];
+
 preg_match('|VARS.date = "(.*)"|', $vars, $match) ;
 $date = $match[1];
 
@@ -345,8 +351,8 @@ $copyright_owner = $match[1];
             
             <li><a href="/templates"><?php echo Templates ;?></a></li>
             <li><a title="Change System Username & Password, Web Title - Enable/Disable functions. Translations not fully functional yet. " href="/pow-custom.php"><i class="fa fa-key" ></i> <?php echo Customize ;?></a></li>         
-            <li><a href="/pow-scan.php" title="Update the search function with the tags and description you have written. View Tags per Page." ><i class="fa fa-info-circle" ></i> <?php echo Update_Search ;?></a></li>
-            <li><a href="#" id="confirm" onclick="call_popup(); return false;" title="If you have created new sub folder this function  will copy needed files to the folders, so you can edit text file in folder." ><i class="fa fa-info-circle" ></i> <?php echo System_Update ;?></a></li>
+            <li><a href="/pow-scan.php" title="Update the search function with the tags and description you have written. View Tags per Page." ><i class="fa fa-refresh" ></i> <?php echo Update_Search ;?></a></li>
+            <li><a href="#" id="confirm" onclick="call_popup(); return false;" title="If you have created new sub folder this function  will copy needed files to the folders, so you can edit text file in folder." ><i class="fa fa-refresh" ></i> <?php echo System_Update ;?></a></li>
          
             <li><a href="/pow-login.php"><?php echo Logout ;?></a></li>             
             <li><a href="javascript:history.go(-1)" title="Tooltip - "><i class="fa fa-arrow-circle-left" ></i> <?php echo Back ;?></a></li>               
@@ -370,7 +376,9 @@ $search_pages = $_POST['search_pages'] ;
 $search_tags = $_POST['search_tags'] ;
 $pages_side = $_POST['pages_side'] ;
 $links_side = $_POST['links_side'] ;
-$page_top = $_POST['page_top'] ;     
+$page_top = $_POST['page_top'] ;
+$print_page = $_POST['print_page'] ;
+$copy_page = $_POST['copy_page'] ;         
 $copyright = $_POST['copyright'] ;
 $copyright_owner = $_POST['copyright_owner'] ;     
 $Translator_Name = $_POST['Translator_Name'] ;     
@@ -411,7 +419,9 @@ $system_text =
  VARS.links_side = "'.$links_side.'";    // side menu
  VARS.copyright_owner = "'.$copyright_owner.'";    // footer
  VARS.copyright = "'.$copyright.'";    // footer
- VARS.page_top = "'.$page_top.'";    // footer
+ VARS.page_top = "'.$page_top.'";      // footer
+ VARS.print_page = "'.$print_page.'";  // footer
+ VARS.copy_page = "'.$copy_page.'";  // footer
  VARS.version_history = "'.$version_history.'";  // footer            
  VARS.licenses = "'.$licenses.'"; // footer
             ' ;
@@ -493,7 +503,7 @@ fclose($system_trans);
 
 
 <div style="display: inline; position: absolute; left: 40px; top: 60px; width:600px; ">
-  <h4>Customize POW CMS </h4>
+  <h4>Customize POW CMS - folder <?php echo basename(__DIR__) ;?></h4>
     
     
 <form id="translation" class="" method="post" action="pow-custom.php">					
@@ -502,7 +512,7 @@ fclose($system_trans);
         
 		<div>
 		  <label class="vars-input" for="name" title=""><i class="fa fa-info-circle" ></i> POW CMS Version - (pow-vars.js)</label><br>
-			<input id="title" name="title" class="element" type="text" maxlength="255" size="32" value="<?php echo "v1.12" ;?>"/> 			
+			<input id="title" name="title" class="element" type="text" maxlength="255" size="32" value="<?php echo "v1.13" ;?>"/> 			
       <input id="title" name="system_version" class="element" type="text" maxlength="255" size="32" value="<?php echo $system_version ;?>"/>
 		</div>
 		           		
@@ -556,7 +566,19 @@ fclose($system_trans);
 		  <label class="vars-input" for="name" title=""><i class="fa fa-info-circle" ></i> Page Top - (pow-vars.js)</label><br>
 			<input id="title" name="title" class="element" type="text" maxlength="255" size="32" value="<?php echo "Page Top!" ;?>"/> 			
       <input id="title" name="page_top" class="element" type="text" maxlength="255" size="32" value="<?php echo $page_top ;?>"/>
-		</div> 		
+		</div> 
+    
+    <div>
+		  <label class="vars-input" for="name" title=""><i class="fa fa-info-circle" ></i> Print Page - (pow-vars.js)</label><br>
+			<input id="title" name="title" class="element" type="text" maxlength="255" size="32" value="<?php echo "Print Page" ;?>"/> 			
+      <input id="title" name="print_page" class="element" type="text" maxlength="255" size="32" value="<?php echo $print_page ;?>"/>
+		</div> 
+    
+    <div>
+		  <label class="vars-input" for="name" title=""><i class="fa fa-info-circle" ></i> Copy Page - (pow-vars.js)</label><br>
+			<input id="title" name="title" class="element" type="text" maxlength="255" size="32" value="<?php echo "Copy Page Text" ;?>"/> 			
+      <input id="title" name="copy_page" class="element" type="text" maxlength="255" size="32" value="<?php echo $copy_page ;?>"/>
+		</div> 	    	    		
 
     <div>
 		  <label class="vars-input" for="name" title=""><i class="fa fa-info-circle" ></i> Copyright - (pow-vars.js)</label><br>
@@ -595,6 +617,7 @@ fclose($system_trans);
     <input id="saveForm" class="button" type="submit" name="submit_vars" value=" Update Customize & System Variables " />     
 
 		</form>	
+		<p><br></p>
     </div>
 
 <!-- - - - - - - - writing user_pass.php - - - - - - - -->

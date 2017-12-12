@@ -14,6 +14,7 @@ $msg = 'Please enter a username and password.';
             //setcookie('password', md5($_POST['password']), '');
             setcookie("username", '',time() - 3600);
             setcookie("password", '',time() - 3600);
+            setcookie("root", '',time() - 3600);
             setcookie('login_status','Logged Out', time()+60*60*24*365 );
             header('Location: index.htm');
         }
@@ -47,18 +48,7 @@ $msg = 'Please enter a username and password.';
     echo 'You must supply a username and password.';
     }
 */ 
-
-   class MyDB extends SQLite3 {
-      function __construct() {
-         $this->open('system/sqlite/powcms.db');
-      }
-   }
-   $db = new MyDB();
-   if(!$db) {
-      $sqlite_msg = $db->lastErrorMsg();
-   } else {
-      $sqlite_msg = "Opened SQLite database successfully\n";
-   }   
+ 
 ?>
 
 <!DOCTYPE html>

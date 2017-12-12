@@ -47,7 +47,7 @@ if ($sqlite == 0){  // check ig sqlite is enbled in pow-config.php
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">  
 
-  <title>POW Editor v1.12</title>
+  <title>POW Editor v1.13</title>
   
   <!-- Bootstrap -->
 <?php if(file_exists($root.'res/bootstrap/bootstrap.min.css')) { ;?>  
@@ -327,8 +327,8 @@ https://www.computerhope.com/htmcolor.htm
             
             <li><a href="/templates"><?php echo Templates ;?></a></li>
             <li><a title="Change System Username & Password, Web Title - Enable/Disable functions. Translations not fully functional yet. " href="/pow-custom.php"><i class="fa fa-key" ></i> <?php echo Customize ;?></a></li>         
-            <li><a href="/pow-scan.php" title="Update the search function with the tags and description you have written. View Tags per Page." ><i class="fa fa-info-circle" ></i> <?php echo Update_Search ;?></a></li>
-            <li><a href="#" id="confirm" onclick="call_popup(); return false;" title="If you have created new sub folder this function  will copy needed files to the folders, so you can edit text file in folder." ><i class="fa fa-info-circle" ></i> <?php echo System_Update ;?></a></li>
+            <li><a href="/pow-scan.php" title="Update the search function with the tags and description you have written. View Tags per Page." ><i class="fa fa-refresh" ></i> <?php echo Update_Search ;?></a></li>
+            <li><a href="#" id="confirm" onclick="call_popup(); return false;" title="If you have created new sub folder this function  will copy needed files to the folders, so you can edit text file in folder." ><i class="fa fa-refresh" ></i> <?php echo System_Update ;?></a></li>
          
             <li><a href="/pow-login.php"><?php echo Logout ;?></a></li>             
             <li><a href="javascript:history.go(-1)" title="Tooltip - "><i class="fa fa-arrow-circle-left" ></i> <?php echo Back ;?></a></li>               
@@ -384,9 +384,15 @@ $vars  = file_get_contents("index_vars.js");
           
 preg_match('|VARS.title = "(.*)"|', $vars, $match) ; 
 $title = $match[1];
+if (empty($title)){$title = ucfirst(basename(__DIR__)) ; }
+
+preg_match('|VARS.file_name = "(.*)"|', $vars, $match) ;
+$file_name = $match[1];
+if (empty($file_name)){$file_name = basename(__DIR__).".htm" ; }
 
 preg_match('|VARS.author = "(.*)"|', $vars, $match) ; 
 $name = $match[1];
+if (empty($name)){$name = ucfirst($user) ; }
 
 preg_match('|VARS.data = "(.*)"|', $vars, $match) ;
 $data = $match[1];
@@ -394,14 +400,12 @@ $data = $match[1];
 preg_match('|VARS.category = "(.*)"|', $vars, $match) ;
 $category = $match[1];
 
-preg_match('|VARS.file_name = "(.*)"|', $vars, $match) ;
-$file_name = $match[1];
-
 preg_match('|url : "(.*)"|', $vars, $match) ;
 $load_file_not = $match[1];
 
 preg_match('|VARS.date = "(.*)"|', $vars, $match) ;
 $date = $match[1];
+if (empty($date)){$date = date("Y-m-d H:i") ; }
 
 preg_match('|VARS.image = "(.*)"|', $vars, $match) ;
 $image = $match[1];
@@ -436,6 +440,7 @@ $tags = $match[1];
 $add_folder = $_POST['add_folder'];  
 if($add_folder) {
 if (!is_dir($add_folder)) {
+    $add_folder = str_to_url($add_folder, -1);
     mkdir($add_folder, 0777, true);
     copy("pow-edit.php" , $add_folder."/pow-edit.php");
     copy("index.htm" , $add_folder."/index.htm");
@@ -573,12 +578,12 @@ $description = $_POST['description'];
 		
 		<div>
 		  <label class="vars-input" for="name" title="Tooltip - "><i class="fa fa-info-circle" ></i> Page Title - Title shown on top of page (<font color="red">required</font>)</label>
-			<input id="title" name="title" class="element" type="text" maxlength="255" size="35" onfocus="this.style.color='#f00'; this.value='';" placeholder="Enter Page Title" "style="color: #000;" value="<?php echo $title ;?>"/> 
+			<input id="title" name="title" class="element" type="text" maxlength="255" size="35" onfocus="this.style.color='#f00'; this.value='<?php echo $title ;?>';" placeholder="Enter Page Title" "style="color: #000;" value="<?php echo $title ;?>"/> 
 		</div> 
 
 		<div>
 		  <label class="vars-input" for="file_name" title="Tooltip - "><i class="fa fa-info-circle" ></i> File Name - File loaded into web page (<font color="red">required</font>)</label>
-			<input id="file_name" name="file_name" class="element" type="text" maxlength="255" size="35" onfocus="this.style.color='#f00'; this.value='';" placeholder="Enter Filename" "style="color: #000;" value="<?php echo $file_name ;?>"/> 
+			<input id="file_name" name="file_name" class="element" type="text" maxlength="255" size="35" onfocus="this.style.color='#f00'; this.value='<?php echo $file_name ;?>';" placeholder="Enter Filename" "style="color: #000;" value="<?php echo $file_name ;?>"/> 
 		</div> 		  		
 	
 		<div>
@@ -1067,7 +1072,33 @@ foreach ($files as $name => $file)
       flush();           
 		  continue;
 	}
-}
-       
+}      
 }  
+
+function str_to_url($s, $case=0){ // filter nationional chars when creating a folder
+	$acc =	'É	Ê	Ë	š	Ì	Í	ƒ	œ	µ	Î	Ï	ž	Ð	Ÿ	Ñ	Ò	Ó	Ô	Š	£	Õ	Ö	Œ	¥	Ø	Ž	§	À	Ù	Á	Ú	Â	Û	Ã	Ü	Ä	Ý	';
+	$str =	'E	E	E	s	I	I	f	o	m	I	I	z	D	Y	N	O	O	O	S	L	O	O	O	Y	O	Z	S	A	U	A	U	A	U	A	U	A	Y	';
+	$acc.=	'Å	Æ	ß	Ç	à	È	á	â	û	Ĕ	ĭ	ņ	ş	Ÿ	ã	ü	ĕ	Į	Ň	Š	Ź	ä	ý	Ė	į	ň	š	ź	å	þ	ė	İ	ŉ	Ţ	Ż	æ	ÿ	';
+	$str.=	'A	A	S	C	a	E	a	a	u	E	i	n	s	Y	a	u	e	I	N	S	Z	a	y	E	i	n	s	z	a	p	e	I	n	T	Z	a	y	';
+	$acc.=	'Ę	ı	Ŋ	ţ	ż	ç	Ā	ę	Ĳ	ŋ	Ť	Ž	è	ā	Ě	ĳ	Ō	ť	ž	é	Ă	ě	Ĵ	ō	Ŧ	ſ	ê	ă	Ĝ	ĵ	Ŏ	ŧ	ë	Ą	ĝ	Ķ	ŏ	';
+	$str.=	'E	l	n	t	z	c	A	e	I	n	T	Z	e	a	E	i	O	t	z	e	A	e	J	o	T	i	e	a	G	j	O	t	e	A	g	K	o	';
+	$acc.=	'Ũ	ì	ą	Ğ	ķ	Ő	ũ	í	Ć	ğ	ĸ	ő	Ū	î	ć	Ġ	Ĺ	Œ	ū	ï	Ĉ	ġ	ĺ	œ	Ŭ	ð	ĉ	Ģ	Ļ	Ŕ	ŭ	ñ	Ċ	ģ	ļ	ŕ	Ů	';
+	$str.=	'U	i	a	G	k	O	u	i	C	g	k	o	U	i	c	G	L	O	u	i	C	g	l	o	U	o	c	G	L	R	u	n	C	g	l	r	U	';
+	$acc.=	'ò	ċ	Ĥ	Ľ	Ŗ	ů	ó	Č	ĥ	ľ	ŗ	Ű	ô	č	Ħ	Ŀ	Ř	ű	õ	Ď	ħ	ŀ	ř	Ų	ö	ď	Ĩ	Ł	Ś	ų	Đ	ĩ	ł	ś	Ŵ	ø	đ	';
+	$str.=	'o	c	H	L	R	u	o	C	h	l	r	U	o	c	H	L	R	u	o	D	h	l	r	U	o	d	I	L	S	c	D	i	l	s	W	o	d	';
+	$acc.=	'Ī	Ń	Ŝ	ŵ	ù	Ē	ī	ń	ŝ	Ŷ	Ə	ú	ē	Ĭ	Ņ	Ş	ŷ	 	:	;	.	,';
+	$str.=	'I	N	S	w	u	E	i	n	s	Y	e	u	e	I	N	S	y	-	-	-	-	-';
+
+	$out = str_replace(explode("\t", $acc), explode("\t", $str), $s);
+
+	if($case == -1){
+		//return strtolower(preg_replace('/[^a-zA-Z0-9_-]/', '', $out));
+		return preg_replace('/[^a-zA-Z0-9_-]/', '', $out);
+	}else if($case == 1){
+		//return strtoupper(preg_replace('/[^a-zA-Z0-9_-]/', '', $out));
+		return preg_replace('/[^a-zA-Z0-9_-]/', '', $out);
+	}else{
+		return preg_replace('/[^a-zA-Z0-9_-]/', '', $out);
+	}
+} // end str_to_url
 ?>
