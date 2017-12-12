@@ -1,5 +1,17 @@
 Version History and Project objectives
 
+powcms.zip v1.13 - 2017-12-12
+- Page Editor now filters national characters when creating a folder and repaces them with ASCII characters.
+- Page Editor auto detects folder name and suggests Title, File name, Date and Author to make it easier to create pages.
+- Added login check in pow-update.php to prevent scanning of foldes and pages.
+- Added function "Print Page" to footer. Hides right bar and resizes main html text.
+- Added function "Copy Page Text" to footer.
+- Made "Print Page" and "Copy Page Text" translatable in Customize.
+- Move Licenses to Info & Help pages.
+- Moved "Page Top" button to footer.
+- Made a responsive Theme for Colorbox image zoom
+- Added some info about Apple OSX and how to start a simple webserver with start_osx.sh file. )I know nothing about OSX)
+
 powcms.zip v1.12 - 2017-12-09
 - Added Highslide javascript for popup images. Use class="highslide" and rel="highslide" in link for image popup.
 - Fixed some responsive bugs (index.htm & mobile-x.css) for screen size less than 768px.
