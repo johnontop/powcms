@@ -7,6 +7,11 @@
 body {  
   background-color: #fafafa ;
   font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+}
+
+.container {
+  padding:20px;
 }
 
 .colorbox-iframe .content {
@@ -17,8 +22,23 @@ body {
 </head>
 
 <body>
+<div class="container">
 <h2>Version History and Project objectives</h2>
 
+<b>powcms.zip v1.14 - 2017-12-19</b><br>
+- Made a custom Theme with colored images for TinyMCE.<br>
+- Added pow-menu. Common menu for pow-edit, pow-scan and pow-custom php files<br>
+- Added a clock js script in index.htm to keep track of time, when struggling with css :-)<br>
+- Added a File Manager (elFinder) for uploads, but it can not access root folder. Not integrated with TinyMCE yet.<br>
+- Added gd2.dll to PHP, so new File Manager can generate thumbnails for files.<br>
+- Added showing of basedir in pow-meny.php<br>
+- CSS fix for rightbar menu in phone and table mode.<br>
+- Added CreateMiniDist.bat file for creating POW Mini CDN version build.<br>
+- Now both POW CMS and POW Mini are included the same ZIP.<br>
+- Improved HTML text export to MS Word, so that national characters show correctly<br>
+- Added logout.php to clear cookies with start.bat. Useful when running multiple POWCSM on the same PC.<br>
+
+<br>
 <b>powcms.zip v1.13 - 2017-12-12</b><br>
 - Page Editor now filters national characters when creating a folder and repaces them with ASCII characters.<br>
 - Page Editor auto detects folder name and suggests Title, File name, Date and Author to make it easier to create pages.<br>
@@ -209,6 +229,6 @@ body {
 - CMS shall work both Offline on a USB Stick and with Online Web Servers.<br>
 - All resource files shall be easily updated. Therefore .js and .css files are kept in same ./res/folder.<br>
 
-
+</div>
 </body>
 </html>
