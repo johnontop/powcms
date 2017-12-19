@@ -1,5 +1,18 @@
 Version History and Project objectives
 
+powcms.zip v1.14 - 2017-12-19
+- Made a custom Theme with colored images for TinyMCE.
+- Added pow-menu. Common menu for pow-edit, pow-scan and pow-custom php files
+- Added a clock js script in index.htm to keep track of time, when struggling with css :-)
+- Added a File Manager (elFinder) for uploads, but it can not access root folder. Not integrated with TinyMCE yet.
+- Added gd2.dll to PHP, so new File Manager can generate thumbnails for files.
+- Added showing of basedir in pow-meny.php
+- CSS fix for rightbar menu in phone and table mode.
+- Added CreateMiniDist.bat file for creating POW Mini CDN version build.
+- Now both POW CMS and POW Mini are included the same ZIP.
+- Improved HTML text export to MS Word, so that national characters show correctly
+- Added logout.php to clear cookies with start.bat. Useful when running multiple POWCSM on the same PC.
+
 powcms.zip v1.13 - 2017-12-12
 - Page Editor now filters national characters when creating a folder and repaces them with ASCII characters.
 - Page Editor auto detects folder name and suggests Title, File name, Date and Author to make it easier to create pages.
