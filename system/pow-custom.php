@@ -328,38 +328,7 @@ $copyright_owner = $match[1];
 </head>
 <body>
 
-      <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/"><img src="/res/topbar-logo.png" /></a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-         <ul class="nav navbar-nav">      
-            <li><a href="/index.htm"><?php echo Start ;?></a></li>                                                   
-            <li><a href="/search.htm"><?php echo Search ;?></a></li>                                                                                                                                                   
-            <li><a href="/sysinfo"><?php echo SysInfo ;?></a></li>  
-            <li><a href="/sysinfo/Page Editor">Editor Help</a></li>                       
-          </ul>          
-          
-         <ul class="nav navbar-nav">                       
-            
-            <li><a href="/templates"><?php echo Templates ;?></a></li>
-            <li><a title="Change System Username & Password, Web Title - Enable/Disable functions. Translations not fully functional yet. " href="/pow-custom.php"><i class="fa fa-key" ></i> <?php echo Customize ;?></a></li>         
-            <li><a href="/pow-scan.php" title="Update the search function with the tags and description you have written. View Tags per Page." ><i class="fa fa-refresh" ></i> <?php echo Update_Search ;?></a></li>
-            <li><a href="#" id="confirm" onclick="call_popup(); return false;" title="If you have created new sub folder this function  will copy needed files to the folders, so you can edit text file in folder." ><i class="fa fa-refresh" ></i> <?php echo System_Update ;?></a></li>
-         
-            <li><a href="/pow-login.php"><?php echo Logout ;?></a></li>             
-            <li><a href="javascript:history.go(-1)" title="Tooltip - "><i class="fa fa-arrow-circle-left" ></i> <?php echo Back ;?></a></li>               
-        </ul>                  
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+<?php include $root.'pow-menu.php' ; ;?>
 
 <?php
 if($_POST['submit_vars']) {    
@@ -396,7 +365,7 @@ $system_text =
  VARS.system_title = "'.$system_title.'";
  VARS.system_tagline = "'.$system_tagline.'";
  VARS.system_version = "'.$system_version.'"; 
- VARS.navigate = "Navigera";
+ VARS.navigate = "Navigate";
  VARS.previous = "Previous Page";
  VARS.next = "Next Page";
  VARS.start = "Start Page";
@@ -421,7 +390,7 @@ $system_text =
  VARS.copyright = "'.$copyright.'";    // footer
  VARS.page_top = "'.$page_top.'";      // footer
  VARS.print_page = "'.$print_page.'";  // footer
- VARS.copy_page = "'.$copy_page.'";  // footer
+ VARS.copy_page = "'.$copy_page.'";    // footer
  VARS.version_history = "'.$version_history.'";  // footer            
  VARS.licenses = "'.$licenses.'"; // footer
             ' ;
@@ -512,7 +481,7 @@ fclose($system_trans);
         
 		<div>
 		  <label class="vars-input" for="name" title=""><i class="fa fa-info-circle" ></i> POW CMS Version - (pow-vars.js)</label><br>
-			<input id="title" name="title" class="element" type="text" maxlength="255" size="32" value="<?php echo "v1.13" ;?>"/> 			
+			<input id="title" name="title" class="element" type="text" maxlength="255" size="32" value="<?php echo "v1.14" ;?>"/> 			
       <input id="title" name="system_version" class="element" type="text" maxlength="255" size="32" value="<?php echo $system_version ;?>"/>
 		</div>
 		           		

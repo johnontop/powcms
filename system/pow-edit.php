@@ -47,7 +47,7 @@ if ($sqlite == 0){  // check ig sqlite is enbled in pow-config.php
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">  
 
-  <title>POW Editor v1.13</title>
+  <title>POW Editor v1.14</title>
   
   <!-- Bootstrap -->
 <?php if(file_exists($root.'res/bootstrap/bootstrap.min.css')) { ;?>  
@@ -303,39 +303,9 @@ https://www.computerhope.com/htmcolor.htm
 <body>
 
  <input name="image" type="file" id="upload" style="display:none;" onchange="">
+ 
+<?php include $root.'pow-menu.php' ; ;?>
 
-      <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/"><img src="/res/topbar-logo.png" /></a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-         <ul class="nav navbar-nav">      
-            <li><a href="/index.htm"><?php echo Start ;?></a></li>                                                   
-            <li><a href="/search.htm"><?php echo Search ;?></a></li>                                                                                                                                                   
-            <li><a href="/sysinfo"><?php echo SysInfo ;?></a></li>  
-            <li><a href="/sysinfo/Page Editor">Editor Help</a></li>                       
-          </ul>          
-          
-         <ul class="nav navbar-nav">                       
-            
-            <li><a href="/templates"><?php echo Templates ;?></a></li>
-            <li><a title="Change System Username & Password, Web Title - Enable/Disable functions. Translations not fully functional yet. " href="/pow-custom.php"><i class="fa fa-key" ></i> <?php echo Customize ;?></a></li>         
-            <li><a href="/pow-scan.php" title="Update the search function with the tags and description you have written. View Tags per Page." ><i class="fa fa-refresh" ></i> <?php echo Update_Search ;?></a></li>
-            <li><a href="#" id="confirm" onclick="call_popup(); return false;" title="If you have created new sub folder this function  will copy needed files to the folders, so you can edit text file in folder." ><i class="fa fa-refresh" ></i> <?php echo System_Update ;?></a></li>
-         
-            <li><a href="/pow-login.php"><?php echo Logout ;?></a></li>             
-            <li><a href="javascript:history.go(-1)" title="Tooltip - "><i class="fa fa-arrow-circle-left" ></i> <?php echo Back ;?></a></li>               
-        </ul>                  
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
 <!--  
     <a class="button" href="javascript:;" onmousedown="addImage()">Insert Logo</a>
     <a class="button" href="javascript:;" onmousedown="getHtml('/layouts/thumbnail.htm')">Insert Layout Test</a>
@@ -353,7 +323,7 @@ tinymce.get("savecontent").execCommand('mceInsertContent',false,'<br><img alt="$
 
     function getFilename () {
       var name = document.getElementById('fileInput'); 
-     var filename = '/layouts/'+ name.value ;
+     var filename = '/res/layouts/'+ name.value ;
      // var filename = '/layouts/thumbnail.htm';  
      // alert('Selected file: ' + name.value);
       //alert(filename.value);
@@ -577,22 +547,22 @@ $description = $_POST['description'];
 		<h4>Page Variables</h4>
 		
 		<div>
-		  <label class="vars-input" for="name" title="Tooltip - "><i class="fa fa-info-circle" ></i> Page Title - Title shown on top of page (<font color="red">required</font>)</label>
-			<input id="title" name="title" class="element" type="text" maxlength="255" size="35" onfocus="this.style.color='#f00'; this.value='<?php echo $title ;?>';" placeholder="Enter Page Title" "style="color: #000;" value="<?php echo $title ;?>"/> 
+		  <label class="vars-input" for="name" title="Tooltip - "><i class="fa fa-info-circle" ></i> Page Title - shown on top of page (<font color="red">required</font>)</label>
+			<input id="title" name="title" class="element" type="text" maxlength="255" size="35" this.value='<?php echo $title ;?>';" placeholder="Enter Page Title" "style="color: #000;" value="<?php echo $title ;?>"/> 
 		</div> 
 
 		<div>
-		  <label class="vars-input" for="file_name" title="Tooltip - "><i class="fa fa-info-circle" ></i> File Name - File loaded into web page (<font color="red">required</font>)</label>
-			<input id="file_name" name="file_name" class="element" type="text" maxlength="255" size="35" onfocus="this.style.color='#f00'; this.value='<?php echo $file_name ;?>';" placeholder="Enter Filename" "style="color: #000;" value="<?php echo $file_name ;?>"/> 
+		  <label class="vars-input" for="file_name" title="Tooltip - "><i class="fa fa-info-circle" ></i> File Name - file name for html page (<font color="red">required</font>)</label>
+			<input id="file_name" name="file_name" class="element" type="text" maxlength="255" size="35" this.value='<?php echo $file_name ;?>';" placeholder="Enter Filename" "style="color: #000;" value="<?php echo $file_name ;?>"/> 
 		</div> 		  		
 	
 		<div>
-		  <label class="vars-input" for="data" title="Tooltip - "><i class="fa fa-info-circle" ></i> Data ID - Used as value in database (optional)</label>
+		  <label class="vars-input" for="data" title="Tooltip - "><i class="fa fa-info-circle" ></i> Data ID - value used in database (optional)</label>
 			<input id="data" name="data" class="element" type="text" maxlength="255"  size="35" value="<?php echo $data ;?>"/> 
 		</div> 
 
 		<div>
-		  <label class="vars-input" for="category" title="Tooltip - "><i class="fa fa-info-circle" ></i> Category - Used as value in database (optional) </label>
+		  <label class="vars-input" for="category" title="Tooltip - "><i class="fa fa-info-circle" ></i> Category - value used in database (optional) </label>
 			<input id="category" name="category" class="element" type="text" maxlength="255" size="35" value="<?php echo $category ;?>"/> 
 		</div>      
 
@@ -603,17 +573,17 @@ $description = $_POST['description'];
 		</div>      
 
 		<div>
-		  <label class="vars-input" for="name" title="Author - the authors name"><i class="fa fa-info-circle" ></i> Author - Name of author. (adviced)</label>
+		  <label class="vars-input" for="name" title="Author - the authors name"><i class="fa fa-info-circle" ></i> Author - name of author. (adviced)</label>
 			<input id="name" name="name" class="element" type="text" maxlength="255" size="35" value="<?php echo $name ;?>"/> 
 		</div>              			
     		
 		<div>
-		  <label class="vars-input" for="tags" title="Tag Words - to keep a name intact in the 'Tag Search' use an underscore instead of the space character."><i class="fa fa-info-circle" ></i> Page Tags - Used in search function (<font color="red">adviced</font>)</label>
+		  <label class="vars-input" for="tags" title="Tag Words - to keep a name intact in the 'Tag Search' use an underscore instead of the space character."><i class="fa fa-info-circle" ></i> Page Tags - used in search function (<font color="red">adviced</font>)</label>
 			<input id="tags" name="tags" class="element" type="text" maxlength="255" size="35" value="<?php echo $tags ;?>"/> 
 		</div> 
         		
 		<div>
-		  <label class="vars-input" for="description" title="This is the description shown in the Search function. Don´t use character double quotes in the text, since it will be removed or search to stop working. Keep the description within the box- it is around 160 characters."><i class="fa fa-info-circle" ></i> Description - Used in search function (<font color="red">adviced</font>)</label>
+		  <label class="vars-input" for="description" title="This is the description shown in the Search function. Don´t use character double quotes in the text, since it will be removed or search to stop working. Keep the description within the box- it is around 160 characters."><i class="fa fa-info-circle" ></i> Description - used in search function (<font color="red">adviced</font>)</label>
 			<textarea id="description" name="description" cols="40" rows="6" class="element textarea small"><?php echo $description ;?></textarea> 
 		</div> 
 		

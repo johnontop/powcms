@@ -4,28 +4,29 @@
 
 ini_set('display_errors', '1'); 
 
-header("Content-type: application/vnd.ms-word");
-header("Content-Type: application/force-download; charset=UTF-8");
-header("Cache-Control: no-store, no-cache");
-header("Expires: 0"); 
-header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
-
-
 
 if($_POST['submit_word']) {
 $title_name = $_POST['title'];
+$title_name = utf8_decode($title_name);
 $name = $_POST['name'];
 $file_name = $_POST['file_name']; 
 $text = $_POST['text'];
+$text = utf8_decode($text); 
 $date = $_POST['date'];
 $category = $_POST['category'];
 $image = $_POST['image']; 
 $tags = $_POST['tags'];
 $description = $_POST['description'];
+$description = utf8_decode($description);
 }
 
 $text = str_replace('ï»¿', '', $text);
-          
+ 
+header("Content-type: application/vnd.ms-word");
+header("Content-Type: application/force-download; charset=UTF-8");
+header("Cache-Control: no-store, no-cache");
+header("Expires: 0"); 
+header("Cache-Control: must-revalidate, post-check=0, pre-check=0");         
 
 header("Content-disposition: attachment; filename=$title_name.doc");
 
@@ -52,7 +53,7 @@ header("Content-disposition: attachment; filename=$title_name.doc");
 -->
 
 <style>
-	html, body, div, span, p, blockquote, pre, a, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article {
+html, body, div, span, p, blockquote, pre, a, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article {
 		margin-top: 0;
     margin: 0;
 		padding: 0;

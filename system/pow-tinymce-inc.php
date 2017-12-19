@@ -26,21 +26,28 @@ tinymce.init({
         /<\?php[\s\S]*?\?>/g // Protect php code
         ],
         height : "440px",
-        skin : "pollyx",
-         theme: 'modern',
+        theme: 'modern',
+        skin : "powcms",        
         plugins: [
                 "advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker",
                 "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
-                "table directionality emoticons template textcolor paste textcolor colorpicker textpattern"
+                "table directionality emoticons template textcolor paste textcolor colorpicker textpattern youTube"
         ], 
         valid_elements : '*[*]',              
         extended_valid_elements : 'a[class|name|href|target|title|onclick|rel],script[type|src],iframe[src|style|width|height|scrolling|marginwidth|marginheight|frameborder],img[class|src|border=0|alt|title|hspace|vspace|width|height|align|float|onmouseover|onmouseout|name],$elements,strong/b,div[align|class|style|id],br',
 
         toolbar1: "newdocument fullpage | bold italic underline strikethrough | forecolor backcolor | alignleft aligncenter alignright alignjustify | formatselect fontselect fontsizeselect styleselect",
-        toolbar2: "cut copy paste | searchreplace | bullist numlist | outdent indent blockquote | undo redo | link unlink anchor image media | insertdatetime preview code ",
+        toolbar2: "cut copy paste | searchreplace | bullist numlist | outdent indent blockquote | undo redo | link unlink anchor image media youTube | insertdatetime preview code ",
         toolbar3: "table | hr removeformat | subscript superscript | charmap emoticons | ltr rtl | spellchecker | visualchars visualblocks nonbreaking template pagebreak restoredraft | print fullscreen",
         menubar: true,
+        image_advtab: true,
+        image_title: true,
         toolbar_items_size: 'small',
+        link_class_list: [
+         {title: 'None', value: ''},
+         {title: 'Button', value: 'button'},
+         {title: 'Popup Image', value: 'responsive'}
+        ],
       //image_advtab: true,
       file_picker_callback: function(callback, value, meta) {
       if (meta.filetype == 'image') {
@@ -68,7 +75,7 @@ tinymce.init({
         ],
 
         templates: [
-                {title: '2 column', content: '	<div class="row"><div class="col-md-6">First</div><div class="col-md-6">Second</div></div>'},
+                {title: 'Bootstrap - row with 2 columns', content: '	<div class="row"><div class="col-md-6">First col-md-6</div><div class="col-md-6">Second col-md-6</div></div>'},
                 {title: 'Test template 2', content: 'Test 2'}
         ],
         content_css: [
