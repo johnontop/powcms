@@ -12,6 +12,7 @@ powcms.zip v1.14 - 2017-12-19
 - Now both POW CMS and POW Mini are included the same ZIP.
 - Improved HTML text export to MS Word, so that national characters show correctly
 - Added logout.php to clear cookies with start.bat. Useful when running multiple POWCSM on the same PC.
+- Added simple YouTube plugin
 
 powcms.zip v1.13 - 2017-12-12
 - Page Editor now filters national characters when creating a folder and repaces them with ASCII characters.
