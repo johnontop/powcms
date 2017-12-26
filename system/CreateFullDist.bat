@@ -1,11 +1,14 @@
 @echo off
 SET NewDir=pow-new
 ECHO .
-ECHO THIS BAT FILE WILL CREATE A NEW POWCMS DIRECTORY AND COPY ALL SYSTEM FILES TO IT.
+ECHO THIS BAT FILE WILL CREATE A NEW POWCMS DIRECTORY 
+ECHO AND COPY ONLY NEEDED SYSTEM FILES TO IT.
 ECHO .
 ECHO Remember to Logout from current POWCMS and Clear Cache in new Copy.
 ECHO .
-set /P NewDir="ENTER NEW DIRECTORY HERE > " ||set NewDir=pow-new
+ECHO Create a POWCMS named pow-full or enter your own name:
+ECHO .
+set /P NewDir="USE PREDEFINED NAME OR ENTER NEW DIRECTORY NAME HERE > " ||set NewDir=pow-full
 SET CurrentDir=%CD%
 CD %CD% 
 

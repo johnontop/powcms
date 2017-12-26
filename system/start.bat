@@ -30,12 +30,17 @@ echo %DesktopFolder%
         echo .
         echo Starting POW CMS with PHP v5.4.9
         start shttpd.exe
+        
+        php\php-cgi.exe ..\pow-logout.php   
+                     
         start.htm
+        exit
         
     ) ELSE (
         echo .
         echo "Starting POW CMS"
         start shttpd.exe        
         start.htm
+        exit
     )
 exit

@@ -394,6 +394,12 @@ $system_text =
  VARS.version_history = "'.$version_history.'";  // footer            
  VARS.licenses = "'.$licenses.'"; // footer
             ' ;
+            
+$pow_version  = fopen("pow-version.txt", "w") or die("Unable to open file!"); 
+fwrite($pow_version, pack("CCC",0xef,0xbb,0xbf));  
+//fwrite($index_vars, utf8_encode($index_text));
+fwrite($pow_version, $system_version);
+fclose($pow_version);             
         
 $index_vars  = fopen("pow_vars.js", "w") or die("Unable to open file!"); 
 fwrite($index_vars, pack("CCC",0xef,0xbb,0xbf));  
@@ -480,8 +486,8 @@ fclose($system_trans);
 				
         
 		<div>
-		  <label class="vars-input" for="name" title=""><i class="fa fa-info-circle" ></i> POW CMS Version - (pow-vars.js)</label><br>
-			<input id="title" name="title" class="element" type="text" maxlength="255" size="32" value="<?php echo "v1.14" ;?>"/> 			
+		  <label class="vars-input" for="name" title=""><i class="fa fa-info-circle" ></i> POW CMS System Version - (pow-vars.js)</label><br>
+			<input id="title" name="title" class="element" type="text" maxlength="255" size="32" value="<?php echo "Important for Updater - eg v1.xx" ;?>"/> 			
       <input id="title" name="system_version" class="element" type="text" maxlength="255" size="32" value="<?php echo $system_version ;?>"/>
 		</div>
 		           		
@@ -506,7 +512,7 @@ fclose($system_trans);
 		
     <div>
 		  <label class="vars-input" for="name" title=""><i class="fa fa-info-circle" ></i> Copyright Owner - (pow-vars.js)</label><br>
-			<input id="title" name="title" class="element" type="text" maxlength="255" size="32" value="<?php echo "POW CMS 2017" ;?>"/> 			
+			<input id="title" name="title" class="element" type="text" maxlength="255" size="32" value="<?php echo "POW CMS 2017-2018" ;?>"/> 			
       <input id="title" name="copyright_owner" class="element" type="text" maxlength="255" size="32" value="<?php echo $copyright_owner ;?>"/>
 		</div> 			
 		     

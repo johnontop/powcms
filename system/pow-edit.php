@@ -47,7 +47,7 @@ if ($sqlite == 0){  // check ig sqlite is enbled in pow-config.php
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">  
 
-  <title>POW Editor v1.14</title>
+  <title>POW Editor v4.7.4</title>
   
   <!-- Bootstrap -->
 <?php if(file_exists($root.'res/bootstrap/bootstrap.min.css')) { ;?>  

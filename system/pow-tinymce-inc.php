@@ -27,18 +27,19 @@ tinymce.init({
         ],
         height : "440px",
         theme: 'modern',
-        skin : "powcms",        
+        skin : "powcms",  
+        // TinyMCE premium plugins advcode codesample toc tinymcespellchecker a11ychecker linkchecker textpattern       
         plugins: [
-                "advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker",
+                "paragraph tiny_mce_wiris youtube eqneditor toc advlist autolink autosave link image imagetools lists charmap print preview hr anchor pagebreak spellchecker",
                 "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
-                "table directionality emoticons template textcolor paste textcolor colorpicker textpattern youTube"
+                "table directionality emoticons template textcolor paste textcolor colorpicker textpattern"
         ], 
         valid_elements : '*[*]',              
-        extended_valid_elements : 'a[class|name|href|target|title|onclick|rel],script[type|src],iframe[src|style|width|height|scrolling|marginwidth|marginheight|frameborder],img[class|src|border=0|alt|title|hspace|vspace|width|height|align|float|onmouseover|onmouseout|name],$elements,strong/b,div[align|class|style|id],br',
+        extended_valid_elements : 'a[class|id|name|href|target|title|onclick|rel],li[data-mce-fragment], script[type|src],iframe[src|style|width|height|scrolling|marginwidth|marginheight|frameborder],img[class|src|border=0|alt|title|hspace|vspace|width|height|align|float|onmouseover|onmouseout|name],$elements,strong/b,div[align|class|style|id],br',
 
-        toolbar1: "newdocument fullpage | bold italic underline strikethrough | forecolor backcolor | alignleft aligncenter alignright alignjustify | formatselect fontselect fontsizeselect styleselect",
-        toolbar2: "cut copy paste | searchreplace | bullist numlist | outdent indent blockquote | undo redo | link unlink anchor image media youTube | insertdatetime preview code ",
-        toolbar3: "table | hr removeformat | subscript superscript | charmap emoticons | ltr rtl | spellchecker | visualchars visualblocks nonbreaking template pagebreak restoredraft | print fullscreen",
+        toolbar1: "newdocument fullpage | bold italic underline strikethrough | forecolor backcolor | alignleft aligncenter alignright alignjustify toc | formatselect fontselect fontsizeselect styleselect",
+        toolbar2: "cut copy paste | searchreplace | bullist numlist | outdent indent blockquote | undo redo | link unlink anchor image media youtube | insertdatetime | eqneditor tiny_mce_wiris_formulaEditor tiny_mce_wiris_formulaEditorChemistry",
+        toolbar3: "table | hr removeformat | subscript superscript | charmap emoticons | ltr rtl | spellchecker | visualchars visualblocks  showparagraphs nonbreaking template pagebreak restoredraft | print fullscreen  | preview code",
         menubar: true,
         image_advtab: true,
         image_title: true,
