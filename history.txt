@@ -1,8 +1,20 @@
 Version History and Project objectives
 
+powcms.zip v1.15 - 2017-12-26
+- Added/Updated to TinyMCE version 4.7.4 (2017-12-05)
+- Added/Updated to PHP version 5.4.45 NTS VC9 Win32.
+- Added online optional PHP version 5.6.4 NTS VC11 Win32 for Windows XP/2003 and newer.
+- Added TinyMCE plugin Paragraph Styling.
+- Added TinyMCE plugin WIRIX Equation Editor.
+- Added TinyMCE plugin Equation Editor.
+- Added TinyMCE plugin YouTube Video Insert.
+- Added TinyMCE plugin Table of Content.
+- Added TinyMCE plugin Advanced List Options.
+- Added 7-Zip + CreateSystemZip.bat file for better creation of Zip distributions.
+
 powcms.zip v1.14 - 2017-12-19
 - Made a custom Theme with colored images for TinyMCE.
-- Added pow-menu. Common menu for pow-edit, pow-scan and pow-custom php files
+- Added pow-menu. Common menu for pow-edit, pow-scan and pow-custom php files.
 - Added a clock js script in index.htm to keep track of time, when struggling with css :-)
 - Added a File Manager (elFinder) for uploads, but it can not access root folder. Not integrated with TinyMCE yet.
 - Added gd2.dll to PHP, so new File Manager can generate thumbnails for files.
@@ -12,7 +24,6 @@ powcms.zip v1.14 - 2017-12-19
 - Now both POW CMS and POW Mini are included the same ZIP.
 - Improved HTML text export to MS Word, so that national characters show correctly
 - Added logout.php to clear cookies with start.bat. Useful when running multiple POWCSM on the same PC.
-- Added simple YouTube plugin
 
 powcms.zip v1.13 - 2017-12-12
 - Page Editor now filters national characters when creating a folder and repaces them with ASCII characters.
