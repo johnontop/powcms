@@ -1,5 +1,12 @@
 Version History and Project objectives
 
+powcms.zip v1.16 - 2018-01-08
+- Added Options, first version of a downloader for option zip files. These can be updates of pages, modules, themes.
+- Added test.zip with test pages to GitHub powcms/optional folder, for test with Options downloader.
+- Added CreateZipFile.bat to zip folder trees with 7-zip.
+- Added Image Gallery module based on UberGallery
+- Added a demo folder of Image Gallery module with 42 paintings in Git Optional
+
 powcms.zip v1.15 - 2017-12-26
 - Added/Updated to TinyMCE version 4.7.4 (2017-12-05)
 - Added/Updated to PHP version 5.4.45 NTS VC9 Win32.
