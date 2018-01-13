@@ -1,11 +1,16 @@
 Version History and Project objectives
 
+powcms.zip v1.17 - 2018-01-13
+- Added Site Map module that shows infinite sub folders
+- File Manager (elFinder) for uploads, can now access root folder. But not yet integrated with TinyMCE.
+- Added Bug causing "System Update" not to work. "Use Folder" Scan to create Side Menu
+
 powcms.zip v1.16 - 2018-01-08
 - Added Options, first version of a downloader for option zip files. These can be updates of pages, modules, themes.
 - Added test.zip with test pages to GitHub powcms/optional folder, for test with Options downloader.
 - Added CreateZipFile.bat to zip folder trees with 7-zip.
 - Added Image Gallery module based on UberGallery
-- Added a demo folder of Image Gallery module with 42 paintings in Git Optional
+- Added a demo folder of Image Gallery module with 42 paintings
 
 powcms.zip v1.15 - 2017-12-26
 - Added/Updated to TinyMCE version 4.7.4 (2017-12-05)
