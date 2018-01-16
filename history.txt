@@ -1,5 +1,13 @@
 Version History and Project objectives
 
+powcms.zip v1.18 - 2018-01-18
+- File Manager (elFinder) for uploads, can now access root and other folders. But not yet integrated with TinyMCE.
+- Need help for integration - Followed all instructions on https://github.com/Studio-42/elFinder/wiki/Integration-with-TinyMCE-4.x, but no luck.
+- Seemed to fix the Bug causing "System Update" not to work. If any problems, you can also use "Folder Scan" in the Editor to create the Side Menu
+- Moved Templates folder with templates for Start Page and Landing Page to Github options - for installation with the Options module.
+- Added tinymce plugin - source-beautifier. A Plugin for the tinymce wysiwyg HTML editor that beautify the HTML source view.
+- Added tinymce plugin - codemagic. A Plugin with a HTML editor that beautify and highlight the HTML source view.
+
 powcms.zip v1.17 - 2018-01-13
 - Added Site Map module that shows infinite sub folders
 - File Manager (elFinder) for uploads, can now access root folder. But not yet integrated with TinyMCE.
