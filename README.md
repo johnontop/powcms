@@ -4,8 +4,8 @@
 <p>I was searching the web for a good HTML editor for local PC use, but couldn't find one. So I ended up making a HTML Page Editor with <a href="https://www.tinymce.com/">TinyMCE</a>, the worlds most popular HTML editor, used on more than 100 million websites. But the project became much more - a full CMS. POW CMS is now a unique and minimalistic, full featured HTML Editor and Web Site builder "application" with more features under development. Start to build your Portable Offline Web Site today. Download and get this complete demo website - from <a href="https://github.com/johnontop/powcms" target="_blank" rel="noopener">Github</a>.<br /></p>
     <br />
     <p>
-        POW CMS is very easy to use and the editor is packed with features and
-        extended with usedful plugins and modules.
+        POW CMS is very easy to use and the editor is packed with word processor features and
+        extended with useful plugins and modules.
     </p>
     <ul>
         <li>
@@ -63,7 +63,7 @@
             User Feeback module
         </li>
         <li>
-            Math Formula plugin
+            Math Formula plugins
         </li>
         <li>
             Chemistry Formula plugin
