@@ -2,6 +2,73 @@
 <p>If you are writing text for the web, this text editor might be perfect for you.<br />View the online demo of the Page Editor &amp; Content Management System here.<br /><a href="https://powcms.000webhostapp.com/" target="_blank" rel="noopener">https://powcms.000webhostapp.com/</a><br /><em><img style="float: left;" src="blob:http://localhost/5b2b092d-0e64-4767-8865-6a85a1f7f69c" alt="" width="175" height="143" /></em></p>
 <h4 style="margin-top: -5px; margin-bottom: 3px;">The worlds most popular HTML editor with more than 100 million users.</h4>
 <p>I was searching the web for a good HTML editor for local PC use, but couldn't find one. So I ended up making a HTML Page Editor with <a href="https://www.tinymce.com/">TinyMCE</a>, the worlds most popular HTML editor, used on more than 100 million websites. But the project became much more - a full CMS. POW CMS is now a unique and minimalistic, full featured HTML Editor and Web Site builder "application" with more features under development. Start to build your Portable Offline Web Site today. Download and get this complete demo website - from <a href="https://github.com/johnontop/powcms" target="_blank" rel="noopener">Github</a>.<br /></p>
+    <br />
+    <p>
+        POW CMS is very easy to use and the editor is packed with features and
+        extended with usedful plugins and modules.
+    </p>
+    <ul>
+        <li>
+            Responsive Web UI for phones, tablets and monitors
+        </li>
+        <li>
+            Easy to customize in Page Editor
+        </li>
+        <li>
+            Automatic Folder scanner and Menu Builder creation
+        </li>
+        <li>
+            Automatic Search Index and page creation
+        </li>
+        <li>
+            Site Map "on the fly" module
+        </li>
+        <li>
+            Text Backup too SQLite database
+        </li>
+        <li>
+            POW CMS Help plugin
+        </li>
+        <li>
+            HTML Code Editor plugin
+        </li>
+        <li>
+            Many Word Processor plugins
+        </li>
+        <li>
+            File Manager plugin
+        </li>
+        <li>
+            Table of Contents plugin
+        </li>
+        <li>
+            Layout/Snippets module/plugin
+        </li>
+        <li>
+            Encrypt/Decrypt Text plugin
+        </li>
+        <li>
+            Youtube plugin
+        </li>
+        <li>
+            Export to MS Word plugin
+        </li>
+        <li>
+            Folder Tree Zip plugin
+        </li>
+        <li>
+            Image Gallery module
+        </li>
+        <li>
+            User Feeback module
+        </li>
+        <li>
+            Math Formula plugin
+        </li>
+        <li>
+            Chemistry Formula plugin
+        </li>
+    </ul>
 <p><img src="screenshots/pow-edit.png" alt="Page Editor" width="768" /></p>
 <h4>It's easy to get started with POW CMS and start editing pages</h4>
 <p><strong>1.</strong> Requirements - PC with Windows XP, Windows 7, Windows 8 or Windows 10<br /><strong>2.</strong> Click on powcms.zip in Github and download it to your PC<br /><strong>3.</strong> Unzip the powcms.zip on your PC<br /><strong>4.</strong> Click on <strong>start.exe</strong> in the "root" folder to start the web server and the web pages.<br /><strong>5.</strong> To edit a Page, click on Edit Page in the upper right corner.<br /><strong>6.</strong> Login with (user=<span style="color: #ff0000;">admin</span> / password=<span style="color: #ff0000;">powcms</span>) and start editing pages.<br /><strong>7.</strong> Read the documentation in the POW CMS demo you just downloaded<br /><strong>8.</strong> Next time you can start POWCMS from the desktop shortcut that´s been created.<br /></p>
