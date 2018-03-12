@@ -1,7 +1,7 @@
 Version History and Project objectives
 
 powcms.zip v1.21 - 2018-03-13
-- Improved password security. Password is no longer shown in clear text. Password is hashed with SHA256 and hash written in config.php
+- Improved password security. Password is no longer shown in plain text. Password is hashed with SHA256 and hash written in config.php
 - Added Logout to footer. Clears cookies set for login and document root folder. Makes it easier to have multiple installations and switch between them.
 - Integrated File Manager elFinder 2.1 with TinyMCE editor.
 
