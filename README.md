@@ -79,6 +79,7 @@
 <p><img src="screenshots/pow-world.png" alt="Distribution Ways" width="768" /></p>
 <br /><strong>Screenshots of POW CMS</strong><br />This is how the Page Editor currently looks like and the Start Page with System Update below.<br /><br />
 <p><img src="screenshots/pow-edit.png" alt="Page Editor" width="768" /></p>
+<p><img src="screenshots/pow-files.png" alt="File Manager" width="768" /></p>
 <p><img src="screenshots/pow-html-edit.png" alt="Page Editor" width="768" /></p>
 <p><img src="screenshots/pow-custom.png" alt="Customize Editor" width="768" /></p>
 <p><img src="screenshots/customize.png" alt="Customize Editor" width="768" /></p>
