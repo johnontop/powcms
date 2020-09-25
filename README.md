@@ -4,6 +4,82 @@
 <h4 style="margin-top: -5px; margin-bottom: 3px;">The worlds most popular HTML editor with more than 100 million users.</h4>
 <p>I was searching the web for a good HTML editor for local PC use, but couldn't find one. So I ended up making a HTML Page Editor with <a href="https://www.tinymce.com/">TinyMCE</a>, the worlds most popular HTML editor, used on more than 100 million websites. But the project became much more - a full CMS. POW CMS is now a unique and minimalistic, full featured HTML Editor and Web Site builder "application" with more features under development. Start to build your Portable Offline Web Site today. Download and get this complete demo website - from <a href="https://github.com/johnontop/powcms" target="_blank" rel="noopener">Github</a>.<br /></p>
     <br />
+<p class="lead">
+    <img src="pow.png" border="0" alt="" width="150" height="120" class="img-float-right"
+    />
+    POWCMS is an acronym for "Portable Offline Web Content Management System".
+    The POWCMS concept has several flavours. This version is called "Tiny Web
+    Editor" and is the third generation of POWCMS. Another version is Tiny
+    Web Book, that makes it possible to have whole website, locally in the
+    mobiles storage. POWCMS is Free. You can personalize, customize and distribute
+    it with your page content as you want, but not sell and make profit from
+    the system itself. See licenses for more info.
+</p>
+<ul class="list-item">
+    <li>
+        <strong>Portable</strong>
+        - You can run the this whole web system from a USB stick or external hard
+        drive on any operating system. (Apple OS requires some OS configuration
+        -See On-Apple) Today USB sticks holds many Gigbytes of memory and is fast
+        will enable Tiny Web Editor to easily handle thousands of pages if needed.
+    </li>
+    <li>
+        <strong>Offline</strong>
+        - Internet access is not needed, since everything needed is included in
+        the the build for the system to work anywhere. A tiny web server, PHP for
+        Windows XP/7/8/10, TinyMCE Editor with plugins, Bootstrap, jQuery with
+        plugins for menus, images and slideshows, fonts and much more for a full
+        modern web experience.
+    </li>
+    <li>
+        <strong>Web</strong>
+        - The end result of your work is clean flat file HTML5 code and a complete
+        website system with features all other systems have, plus many more features.
+        The system is responsive, it will adapt the presentation to desktop screens,
+        tablets and mobiles. Find and search pages foe all views. Since the system
+        is based on files, it can not be hacked. Extremely easy to distribute whole
+        web site with services like "WeTransfer".
+    </li>
+    <li>
+        <strong>Content</strong>
+        - The content is headless, meaning, it is totally separated from the presentation
+        framework system. each page can contain HTML text, documents, PDFs, images,
+        sound and video files. This means you can get content from another developer
+        and it will instantly integrate into your site. We have also put a lot
+        of work into automatic generate menus and search for easy access of pages.
+    </li>
+    <li>
+        <strong>Management</strong>
+        - Content management is super flexible. Get pages from others and integrate
+        directly. Part of the web site can be split several sites in minutes. Move
+        page containers/folders around with the PC file manager. Zip function of
+        the whole site or sub pages is built in, so it is possible to just zip
+        and mail pages to co-workers for review.
+    </li>
+    <li>
+        <strong>System</strong>
+        - The system does not have any external requirements, everything needed
+        is included in te zip, but the system can easily be extended with SQL databases
+        and a page driven/generating system. Plugin modules can be created and
+        add anywhere in the system. No API adaption required, but some design rules
+        needs to be implemented for a plugin. The system is prepared to be easily
+        translatable.
+    </li>
+</ul>
+<br />
+<h3>
+    What does all this mean?
+</h3>
+<p class="lead">
+    You can download this system, no installation, just unzip it on a USB
+    stick. Put the stick in your laptop. Go to a mountain top or a deserted
+    island or a cabin in the forest and then start write and create your web
+    site. When you get internet connection, all you have to do is to upload
+    you work to an online server and it will work exactly as it does on your
+    laptop. The system has many features and there is a learning period. We
+    haven't really focused on the information help pages yet. So please be
+    patient.
+</p>    
     <p>
         POW CMS is very easy to use and the editor is packed with word processor features and
         extended with useful plugins and modules.
