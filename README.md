@@ -2,7 +2,6 @@
 <p>Work in progress with the next version of POWCMS. Version 2 was never released here at Github. <br />But now you can follow the development at the Demo site. <br /> If you are writing text for the web, this text editor might be perfect for you.<br />View the online demo of the Page Editor &amp; Content Management System here.<br />
 <a href="http://arkeditor.epizy.com/index.htm" target="_blank" >http://arkeditor.epizy.com/</a><br /><em><img style="float: left;" src="blob:http://localhost/5b2b092d-0e64-4767-8865-6a85a1f7f69c" alt="" width="175" height="143" /></em></p>
 
-    <br />
 <p class="lead">
     <img src="pow.png" border="0" alt="" width="150" height="120" class="img-float-right"
     />
